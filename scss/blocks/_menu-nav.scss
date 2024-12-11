@@ -1,7 +1,7 @@
 .menu-nav {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 16px;
 
     @media(max-width: $breakpoint1280) {
         gap: 16px;
@@ -17,12 +17,8 @@
     &__link {
         display: block;
         font-weight: 500;
-        font-size: 18px;
-        color: $main-text;
-
-        @media(max-width: $breakpoint1024) {
-            font-size: 16px;
-        }
+        font-size: 16px;
+        color: $black;
 
         &--active {
             color: $main-color;

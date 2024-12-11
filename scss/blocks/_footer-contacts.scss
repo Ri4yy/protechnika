@@ -1,0 +1,23 @@
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+
+        &:has(p) {
+            margin-bottom: 12px;
+        }
+        & > p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 130%;
+            color: #f8f8f8;
+        }
+        & > a {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 130%;
+            color: $main-color;
+        }
+    }
+}

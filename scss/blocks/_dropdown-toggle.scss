@@ -1,0 +1,22 @@
+.dropdown-toggle {
+    background: $main-color;
+    padding: 13px 18px;
+    border-radius: 12px;
+    height: 48px;
+
+    &__name {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color: #f8f8f8;
+
+        &::before {
+            content: url(../assets/img/icons/i-menu.svg);
+            height: 20px;
+        }
+    }
+}

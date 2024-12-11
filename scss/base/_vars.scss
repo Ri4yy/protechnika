@@ -1,5 +1,6 @@
 // color
-$main-color: #548235;
+$main-color: #FF6F00;
+$black: #323232;
 $accent-color: #D4E1BD;
 $secondary-color: #11332A; 
 $main-text: #3A3737;
@@ -13,13 +14,13 @@ $breakpoint480: 480 + px;
 $breakpoint375: 375 + px;
 
 // font-family
-$font-family: '';
+$font-family: "Montserrat", sans-serif;
 
 // border-radius
 $main-radius: 35px;
 
 // container
-$container-width: 1440px;
+$container-width: 1248px;
 $section-top: 100px;
 $padding-md: 24px;
 $padding-sm: 16px;

@@ -1,0 +1,12 @@
+.footer-grid {
+    display: grid;
+    grid-template-columns: 192px 310px;
+    justify-content: space-between;
+
+    &--top {
+        margin-top: 44px;
+    }
+    &--bottom {
+        margin-top: 24px;
+    }
+}

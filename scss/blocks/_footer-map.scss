@@ -1,0 +1,10 @@
+.footer-map {
+    border-radius: 20px;
+    height: 320px;
+    overflow: hidden;
+
+    & iframe {
+        height: inherit;
+        width: 100%;
+    }
+}

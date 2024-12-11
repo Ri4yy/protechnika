@@ -1,11 +1,41 @@
-.tabs__content {
-    display: none;
+.tabs {
+    margin-top: 100px;
 
-    &.active {
-        display: block; 
+    &__list {
+        display: flex;
+        width: fit-content;
+
+        border: 1px solid #9a9a98;
+        border-radius: 30px;
+        margin: 0 auto;
+
+        & li {
+            padding: 6px 24px;
+            border-radius: inherit;
+
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: #9a9a98;
+
+            cursor: pointer;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 32px;
+
+    }
+    &__content {
+        display: none;
+
+        &.active {
+            display: block; 
+        }
     }
 }
 
 .active-tab {
-    color: $main-color;
+    background: $main-color;
+    color: #fff !important;
 }

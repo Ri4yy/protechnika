@@ -1,0 +1,37 @@
+.header-contacts {
+    flex-shrink: 0;
+    
+    &__container {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: $black;
+
+        &--phone {
+            &::before {
+                content: url(../assets/img/icons/i-phone.svg);
+                height: 15px;
+            }
+        }
+        &--mail {
+            &::before {
+                content: url(../assets/img/icons/i-mail.svg);
+                height: 15px;
+            }
+        }
+    }
+}

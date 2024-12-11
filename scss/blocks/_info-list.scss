@@ -1,0 +1,26 @@
+.info-list {
+
+    &__item {
+        display: flex;
+
+        &:first-child {
+            margin-bottom: 4px;
+
+            & > p {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 120%;
+                color: #f8f8f8;
+            }
+        }
+        & > p, & > a {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            color: #9a9a98;
+        }
+    }
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}

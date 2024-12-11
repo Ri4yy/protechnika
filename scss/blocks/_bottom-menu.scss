@@ -1,0 +1,29 @@
+.bottom-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &:not(:first-child) {
+        margin-top: 18px;
+    }
+
+    &__item {
+
+        &:first-child {
+            margin-bottom: 2px;
+
+            & > p {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 130%;
+                color: #f8f8f8;
+            }
+        }
+        & > a {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            color: #9a9a98;
+        } 
+    }
+}

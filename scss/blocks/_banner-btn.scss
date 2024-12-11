@@ -1,0 +1,47 @@
+.banner-btn {
+    position: absolute;
+    top: 160px;
+    left: 0;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &:hover {
+
+            & .banner-btn__icon {
+                // background: rgb(100%, 44%, 0%, .3);
+                background: transparent;
+                border: 1px solid $main-color;
+
+                & svg {
+                    fill: $main-color;
+                    transform: translateX(3px);
+                }
+            }
+        }
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        background: $main-color;
+
+        transition: all .3s;
+
+        & svg {
+            fill: #fff;
+
+            transition: all .3s;
+        }
+    }
+    &__text {
+        font-weight: 800;
+        font-size: 20px;
+        color: $black;
+    }
+}
