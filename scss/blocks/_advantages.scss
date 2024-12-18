@@ -1,0 +1,26 @@
+.advantages {
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+        flex-grow: 1;
+
+        &-icon {
+            max-height: 61px;
+        }
+        &-text {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            color: #9a9a98;
+        }
+    }
+}

@@ -39,7 +39,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
-        color: $main-text;
+        color: $text-color;
 
         @media(max-width: $breakpoint1024) {
             font-size: 14px;
@@ -67,7 +67,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            border: 1px solid $main-text;
+            border: 1px solid $text-color;
             border-radius: 6px;
         }
     }

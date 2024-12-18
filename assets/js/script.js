@@ -33,4 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     tabs('.tabs', '.tabs__list', '.tabs__content', 'active-tab', 'active');
+
+   
+    let btnProperties = document.querySelectorAll('.properties-list__item-toggle')
+
+    btnProperties.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            let propList = e.target.closest('.properties-list').querySelectorAll('.properties-list__item')
+            let propItem = e.target.closest('.properties-list__item')
+            let card = e.target.closest('.main-catalog-card')
+
+            if(propItem.classList.contains('active')) {
+                propItem.classList.remove('active')
+                card.classList.remove('active')
+
+            } else {
+                propList.forEach((list) => {
+                    list.classList.remove('active')
+                })
+
+                propItem.classList.add('active')
+                card.classList.add('active')
+            }
+        })
+    })
 })

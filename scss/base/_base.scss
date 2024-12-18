@@ -16,10 +16,17 @@ h1 {
     color: $main-color;
 }
 h2 {
-    color: $main-color;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 130%;
+    color: $black;
+
+    & span {
+        color: $main-color;
+    }
 }
 h3 {
-    color: $main-text;
+    
 }
 
 // База
@@ -29,11 +36,8 @@ h3 {
     margin: 0 auto;
 
     &__inner {
-        margin-top: 40px;
+        margin-top: 60px;
 
-        @media(max-width: $breakpoint768) {
-            margin-top: 24px;
-        }
     }
 
     @media(max-width: $container-width) {

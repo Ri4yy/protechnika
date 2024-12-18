@@ -1,0 +1,60 @@
+.properties-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__item {
+
+        &-toggle {
+            padding-bottom: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            border-bottom: 1px solid #9A9A98;
+        }
+        &-text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 130%;
+            color: #9a9a98;
+            pointer-events: none;
+        }
+        &-icon {
+            fill: #9A9A98;
+            pointer-events: none;
+            transition: all .3s;
+        }
+
+        &-body {
+
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        &.active {
+
+            & .properties-list__item {
+
+                &-text {
+                    color: $main-color;
+                }
+                &-icon {
+                    fill: $main-color;
+                    rotate: 180deg;
+                }
+                &-body {
+                    grid-template-rows: 1fr;
+                }
+            }
+            & .parameters-list {
+                margin-top: 20px;
+            }
+        }
+    }
+}
