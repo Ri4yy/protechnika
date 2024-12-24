@@ -15,14 +15,23 @@ body {
 h1 {
     color: $main-color;
 }
-h2 {
+.second-title {
     font-weight: 800;
-    font-size: 48px;
     line-height: 130%;
     color: $black;
 
     & span {
         color: $main-color;
+    }
+
+    &--lg {
+        font-size: 48px;
+    }
+    &--md {
+        font-size: 40px;
+    }
+    &--sm {
+        font-size: 36px;
     }
 }
 h3 {

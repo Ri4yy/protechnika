@@ -100,4 +100,33 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.banner__bottom-prev',
         },
     });
+
+    const swiperProducts = new Swiper('.swiper-products', {
+        // Optional parameters
+        slidesPerView: 4,
+        enabled: true,
+        speed: 1200,
+        parallax: true,
+        grabCursor: true,
+      
+        // If we need pagination
+        pagination: {
+            el: ".swiper-counter",
+            type: "custom",
+
+            renderCustom: function (swiper, current, total) {
+                return `<span class="swiper-counter__current">
+                            ${current < 10 ? '0' + current : current}
+                        </span> 
+                        <span class="swiper-counter__total">
+                            /${total < 10 ? '0' + total : total}
+                        </span>`;
+              }
+        },
+      
+        navigation: {
+            nextEl: '.swiper-groups-next',
+            prevEl: '.swiper-groups-prev',
+        },
+    });
 })

@@ -1,0 +1,21 @@
+.swiper-counter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &__current {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 1;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+    }
+    &__total {
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #9a9a98;
+    }
+}

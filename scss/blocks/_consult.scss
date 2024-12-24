@@ -1,0 +1,43 @@
+.consult {
+    $mt: 25px;
+
+    &__top {
+        max-width: 720px;
+
+        &-title {
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 130%;
+            color: $black; 
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+    &__left {
+        margin-top: $mt;
+
+        width: 460px;
+
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+
+        &-text {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+            color: $text-color;
+        }
+    }
+    &__img {
+        margin-top: -76px;
+        display: flex;
+        width: 100%;
+
+        & img {
+            object-fit: contain;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.swiper-products {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-title {
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: $black;
+        }
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 40px;
+
+    }
+}

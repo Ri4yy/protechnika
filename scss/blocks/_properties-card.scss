@@ -1,0 +1,29 @@
+.properties-card {
+    // display: none;
+
+    overflow-y: scroll;
+    height: inherit;
+    width: 100%;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }    
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            color: $text-color;
+        }
+        &-value {
+            font-weight: 600;
+            font-size: 16px;
+            color: $black;
+        }
+    }
+}
