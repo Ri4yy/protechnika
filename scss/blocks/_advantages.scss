@@ -4,6 +4,20 @@
         display: flex;
         flex-wrap: wrap;
         gap: 28px;
+
+        @media(max-width: $breakpoint992) {
+            row-gap: 40px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+            @media(max-width: $breakpoint660) {
+                grid-template-columns: unset;
+            }
+        }
+        @media(max-width: $breakpoint660) {
+            gap: 24px;
+        }
     }
 
     &__item {
@@ -13,14 +27,38 @@
         min-width: 0;
         flex-grow: 1;
 
+        @media(max-width: $breakpoint660) {
+            gap: 16px;
+        }
+
         &-icon {
             max-height: 61px;
+
+            @media(max-width: $breakpoint660) {
+                width: 50px;
+                max-height: 40px;
+                flex-shrink: 0;
+            }
+
+            & img {
+                max-height: inherit;
+            }
         }
         &-text {
             font-weight: 500;
             font-size: 20px;
             line-height: 130%;
             color: #9a9a98;
+
+            @media(max-width: $breakpoint660) {
+                font-size: 16px;
+            }
+
+            & br {
+                @media(max-width: $breakpoint660) {
+                    display: none;
+                }
+            }
         }
     }
 }

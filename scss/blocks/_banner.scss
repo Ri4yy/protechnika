@@ -7,24 +7,29 @@
 
             &-img {
                 &:nth-of-type(1) {
+                    aspect-ratio: 252 / 143;
+                    max-width: 252px;
 
-                    & > img {
-                        aspect-ratio: 252 / 143;
-                        max-width: 252px;
+                    @media(max-width: $breakpoint768) {
+                        display: none;
                     }
+
                 }
                 &:nth-of-type(2) {
-    
-                    & > img {
-                        aspect-ratio: 405 / 198;
-                        max-width: 405px;
-                    }
+                    aspect-ratio: 405 / 198;
+                    max-width: 405px;
+
                 }
                 &:nth-of-type(3) {
-    
-                    & > img {
-                        aspect-ratio: 543 / 261;
-                        max-width: 543px;
+                    aspect-ratio: 543 / 261;
+                    max-width: 543px;
+
+                    @media(max-width: $breakpoint768) {
+                        margin-top: 90px;
+                        margin-left: -160px;
+                    }
+                    @media(max-width: $breakpoint480) {
+                        margin-top: 75px;
                     }
                 }
             }
@@ -35,24 +40,28 @@
 
             &-img {
                 &:nth-of-type(1) {
+                    aspect-ratio: 252 / 143;
+                    max-width: 252px;
 
-                    & > img {
-                        aspect-ratio: 252 / 143;
-                        max-width: 252px;
+                    @media(max-width: $breakpoint768) {
+                        display: none;
                     }
                 }
                 &:nth-of-type(2) {
-    
-                    & > img {
-                        aspect-ratio: 349 / 261;
-                        max-width: 349px;
-                    }
+                    aspect-ratio: 349 / 261;
+                    max-width: 349px;
+
                 }
                 &:nth-of-type(3) {
-    
-                    & > img {
-                        aspect-ratio: 396 / 307;
-                        max-width: 396px;
+                    aspect-ratio: 396 / 307;
+                    max-width: 396px;
+
+                    @media(max-width: $breakpoint768) {
+                        margin-top: 70px;
+                        margin-left: -100px;
+                    }
+                    @media(max-width: $breakpoint480) {
+                        margin-top: 75px;
                     }
                 }
             }
@@ -80,12 +89,35 @@
         background-repeat: no-repeat;
         background-size: cover;
 
+        @media(max-width: $breakpoint1248) {
+            min-height: 180px;
+        }
+        @media(max-width: $breakpoint768) {
+            min-height: 150px;
+        }
+        @media(max-width: $breakpoint375) {
+            min-height: 120px;
+        }
+
         &-title {
             font-weight: 800;
             font-size: 80px;
             letter-spacing: 0.05em;
             text-align: center;
             color: #f8f8f8;
+
+            @media(max-width: $breakpoint1248) {
+                font-size: 70px;
+            }
+            @media(max-width: $breakpoint768) {
+                font-size: 56px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 40px;
+            }
+            @media(max-width: $breakpoint375) {
+                font-size: 32px;
+            }
 
             & span {
                 color: $main-color;
@@ -99,6 +131,16 @@
         position: relative;
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: $breakpoint1248) {
+            margin-top: -40px;
+        }
+        @media(max-width: $breakpoint768) {
+            margin-bottom: 0;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: -36px;
+        }
 
         &-img {
             height: fit-content;
@@ -117,16 +159,28 @@
         flex-wrap: wrap;
         gap: 20px;
 
+        @media(max-width: $breakpoint768) {
+            margin: 25px 0 40px 0;
+            gap: 12px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-bottom: 36px;
+        }
+
         &-item {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
+            // flex-grow: 1;
 
             border: 1px solid #9a9a98;
             border-radius: 16px;
             padding: 12px 20px;
             transition: border-color .3s;
+
+            @media(max-width: $breakpoint480) {
+                padding: 12px 16px;
+            }
 
             &:hover {
                 border-color: $main-color;
@@ -139,6 +193,16 @@
         bottom: -39px;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
+
+        @media(max-width: $breakpoint768) {
+            position: relative;
+            bottom: unset;
+            left: 0;
+            transform: none;
+
+            margin-bottom: 16px;
+        }
 
         &-title {
             font-weight: 600;
@@ -146,6 +210,13 @@
             text-transform: uppercase;
             color: #000;
             text-align: center;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 22px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 20px;
+            }
         }
     }
     &__bottom {
@@ -153,11 +224,20 @@
         align-items: center;
         justify-content: space-between;
 
+        @media(max-width: $breakpoint768) {
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
 
         &-groups {
             display: flex;
             align-items: center;
             gap: 16px;
+
+            @media(max-width: $breakpoint768) {
+                display: contents;
+            }
         }
         &-btn {
             display: flex;
@@ -199,11 +279,26 @@
                 transition: transform .3s;
             }
         }
+        &-prev {
+            @media(max-width: $breakpoint768) {
+                order: 1;
+            }
+        }
+        &-next {
+            @media(max-width: $breakpoint768) {
+                order: 3;
+            }
+        }
     }
     &__counter {
         display: flex;
         align-items: center;
         gap: 4px;
+
+        @media(max-width: $breakpoint768) {
+            order: 2;
+            width: fit-content;
+        }
 
         &-current {
             font-weight: 600;
@@ -212,6 +307,10 @@
             text-transform: uppercase;
             text-align: center;
             color: #000;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 40px;
+            }
         }
         &-total {
             font-weight: 500;

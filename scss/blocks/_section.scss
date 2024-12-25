@@ -1,5 +1,9 @@
 .banner-section {
     padding-bottom: 56px;
+
+    @media(max-width: $breakpoint768) {
+        padding-bottom: 48px;
+    }
 }
 
 .advantages-section {
@@ -9,11 +13,25 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media(max-width: $breakpoint992) {
+        padding: 24px 0;
+    }
+    @media(max-width: $breakpoint660) {
+        padding: 12px 0;
+    }
 }
 
 .main-catalog-section {
     padding-top: 52px;
     padding-bottom: 84px;
+
+    @media(max-width: $breakpoint768) {
+        padding: 38px 0;
+    }
+    @media(max-width: $breakpoint480) {
+        padding: 28px 0;
+    }
 }
 
 .about-section {

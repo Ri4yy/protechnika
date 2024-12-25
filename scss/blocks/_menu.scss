@@ -59,10 +59,10 @@
 
     position: relative;
 
-    width: 14px;
-    height: 10px;
+    width: 24px;
+    height: 16px;
 
-    @media(max-width: $breakpoint768) {
+    @media(max-width: $breakpoint992) {
         display: flex;
     }
 
@@ -75,6 +75,10 @@
         height: 2px;
 
         transition: all .3s;
+
+        @media(max-width: $breakpoint480) {
+            height: 3px;
+        }
 
         &:first-child {
             top: 0;    
@@ -94,7 +98,7 @@
     }
 
     &--open {
-        height: 16px;
+        height: 24px;
         overflow: hidden;
 
         & span {

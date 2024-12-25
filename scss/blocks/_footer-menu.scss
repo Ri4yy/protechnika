@@ -13,5 +13,11 @@
         font-size: 16px;
         line-height: 130%;
         color: #f8f8f8;
+
+        transition: color .3s;
+
+        &:hover {
+            color: $main-color;
+        }
     }
 }

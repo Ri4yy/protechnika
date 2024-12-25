@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // let menu = document.querySelector('.menu'),
-    // btnMenu = document.querySelector('.btn-menu');
+    let menu = document.querySelector('.menu'),
+    btnMenu = document.querySelector('.btn-menu');
 
-    // btnMenu.addEventListener('click', (e) => {
-    //     menu.classList.toggle('menu--open')
+    btnMenu.addEventListener('click', (e) => {
+        // menu.classList.toggle('menu--open')
 
-    //     btnMenu.classList.toggle('btn-menu--open')
-    // })
+        btnMenu.classList.toggle('btn-menu--open')
+    })
 
     // function resize() {
     //     let width = window.innerWidth;
@@ -57,4 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
+
+    // scrollbar
+    // new SimpleBar($('.properties-card')[0], {
+    //     autoHide: false,
+    //     scrollbarMaxSize: 42
+    // });
+
+    $('.properties-card').each((i, el) => {
+        new SimpleBar($('.properties-card')[i], {
+            autoHide: false,
+            scrollbarMaxSize: 42
+        });
+    })
+
+    // DropDown
+    let dropdownToggle = document.querySelector('.header-contacts__dropdown-toggle'),
+        dropdownContent = document.querySelector('.header-contacts__dropdown-content');
+
+
+    dropdownToggle.addEventListener('click', (e) => {
+        dropdownToggle.classList.toggle('active')
+        dropdownContent.classList.toggle('active')
+    })
+
 })

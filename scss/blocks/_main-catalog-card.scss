@@ -12,6 +12,10 @@
     background: #f0f0ef;
     overflow: hidden;
 
+    @media(max-width: $breakpoint992) {
+        max-width: 290px;
+    }
+
     &__top {
         position: relative;
         height: $height-img;
@@ -52,6 +56,12 @@
             text-decoration: underline !important;
             text-underline-offset: 5px;
             color: $black;
+            transition: color .2s;
+
+            &:hover {
+                color: $main-color;
+                text-decoration: none !important;
+            }
         }
     }
 

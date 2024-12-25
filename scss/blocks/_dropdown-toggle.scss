@@ -11,12 +11,19 @@
 
         font-weight: 600;
         font-size: 16px;
-        line-height: 130%;
+        line-height: 1;
         color: #f8f8f8;
 
         &::before {
             content: url(../assets/img/icons/i-menu.svg);
             height: 20px;
         }
+    }
+}
+
+.burger {
+
+    @media(max-width: $breakpoint992) {
+        display: none;
     }
 }

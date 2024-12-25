@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+
     <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/libs/simplebar.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -74,13 +76,34 @@
                                 <a href="mailto:protehnika@yandex.ru" class="header-contacts__link header-contacts__link--mail">protehnika@yandex.ru</a>
                             </div>
                         </div>
+                        <div class="header-contacts__dropdown">
+                            <div class="header-contacts__dropdown-toggle">
+                                <a href="tel:" class="header-contacts__dropdown-toggle__link">8 (835) 000-00-00</a>
+                                <span class="header-contacts__dropdown-toggle__text">Скрыть контакты</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="3" viewBox="0 0 5 3">
+                                    <path class="cls-1" d="M250,80h5l-2.5,3Z" transform="translate(-250 -80)"></path>
+                                </svg>
+                            </div>
+                            <div class="header-contacts__dropdown-content">
+                                <ul class="header-contacts__dropdown-list">
+                                    <li class="header-contacts__dropdown-item">
+                                        <a href="tel:" class="header-contacts__dropdown-link">8 (835) 000-00-00</a>
+                                    </li>
+                                    <li class="header-contacts__dropdown-item">
+                                        <a href="tel:" class="header-contacts__dropdown-link">8 (835) 000-00-00</a>
+                                    </li>
+                                    <li class="header-contacts__dropdown-item">
+                                        <a href="mailto:" class="header-contacts__dropdown-link header-contacts__dropdown-link--mail">protehnika@yandex.ru</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- <button class="btn-menu">
+                    <button class="btn-menu">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button> -->
+                    </button>
                 </div>
             </div>
         </div>
@@ -108,7 +131,7 @@
                                         <div class="banner__main-img">
                                             <img src="./assets/img/banner/big.png" alt="" class="">
                                         </div>
-                                        <div class="banner-btn">
+                                        <div class="banner-btn banner-btn--desktop">
                                             <a href="" class="banner-btn__link">
                                                 <div class="banner-btn__icon">
                                                     <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,6 +141,16 @@
                                                 <span class="banner-btn__text">Перейти в каталог</span>
                                             </a>
                                         </div>
+                                    </div>
+                                    <div class="banner-btn banner-btn--mobile" >
+                                        <a href="" class="banner-btn__link">
+                                            <div class="banner-btn__icon">
+                                                <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.5192 20.6156C16.0116 21.1281 15.1884 21.1281 14.6808 20.6156C14.1731 20.103 14.1731 19.272 14.6808 18.7594L21.5615 11.8125L1.3 11.8125C0.582031 11.8125 0 11.2249 0 10.5C0 9.77513 0.58203 9.1875 1.3 9.1875L21.5615 9.1875L14.6808 2.24058C14.1731 1.72802 14.1731 0.896986 14.6808 0.384423C15.1884 -0.128141 16.0116 -0.128141 16.5192 0.384423L25.6192 9.57192C26.1269 10.0845 26.1269 10.9155 25.6192 11.4281L16.5192 20.6156Z" />
+                                                </svg>
+                                            </div>
+                                            <span class="banner-btn__text">Перейти в каталог</span>
+                                        </a>
                                     </div>
                                     <div class="banner__brands" data-swiper-parallax="-300">
                                         <a href="" class="banner__brands-item">
@@ -142,10 +175,10 @@
                                             <img src="./assets/img/brand/disd.svg" class="banner__brands-icon" alt="">
                                         </a>
                                     </div>
+                                    <div class="banner__name">
+                                        <p class="banner__name-title" data-swiper-parallax="-500">ФРОНТАЛЬНЫЕ ПОГРУЗЧИКИ</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="banner__name">
-                                <p class="banner__name-title" data-swiper-parallax="-500">ФРОНТАЛЬНЫЕ ПОГРУЗЧИКИ</p>
                             </div>
                         </div>
                     </div>
@@ -155,7 +188,7 @@
                                 <div class="banner__head">
                                     <h1 class="banner__head-title" data-swiper-parallax="-1000"><span>PRO</span>ТЕХНИКА</h1>
                                 </div>
-                                <div class="container">
+                                <div class="banner__inner container">
                                     <div class="banner__main" data-swiper-parallax="-400">
                                         <div class="banner__main-img">
                                             <img src="./assets/img/banner/small-2.png" alt="" class="">
@@ -166,7 +199,7 @@
                                         <div class="banner__main-img">
                                             <img src="./assets/img/banner/big-2.png" alt="" class="">
                                         </div>
-                                        <div class="banner-btn">
+                                        <div class="banner-btn banner-btn--desktop">
                                             <a href="" class="banner-btn__link">
                                                 <div class="banner-btn__icon">
                                                     <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,6 +209,16 @@
                                                 <span class="banner-btn__text">Перейти в каталог</span>
                                             </a>
                                         </div>
+                                    </div>
+                                    <div class="banner-btn banner-btn--mobile" >
+                                        <a href="" class="banner-btn__link">
+                                            <div class="banner-btn__icon">
+                                                <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.5192 20.6156C16.0116 21.1281 15.1884 21.1281 14.6808 20.6156C14.1731 20.103 14.1731 19.272 14.6808 18.7594L21.5615 11.8125L1.3 11.8125C0.582031 11.8125 0 11.2249 0 10.5C0 9.77513 0.58203 9.1875 1.3 9.1875L21.5615 9.1875L14.6808 2.24058C14.1731 1.72802 14.1731 0.896986 14.6808 0.384423C15.1884 -0.128141 16.0116 -0.128141 16.5192 0.384423L25.6192 9.57192C26.1269 10.0845 26.1269 10.9155 25.6192 11.4281L16.5192 20.6156Z" />
+                                                </svg>
+                                            </div>
+                                            <span class="banner-btn__text">Перейти в каталог</span>
+                                        </a>
                                     </div>
                                     <div class="banner__brands" data-swiper-parallax="-300">
                                         <a href="" class="banner__brands-item">
@@ -213,7 +256,7 @@
                                 <div class="banner__head">
                                     <h1 class="banner__head-title" data-swiper-parallax="-1000"><span>PRO</span>ТЕХНИКА</h1>
                                 </div>
-                                <div class="container">
+                                <div class="banner__inner container">
                                     <div class="banner__main" data-swiper-parallax="-400">
                                         <div class="banner__main-img">
                                             <img src="./assets/img/banner/small-3.png" alt="" class="">
@@ -224,7 +267,7 @@
                                         <div class="banner__main-img">
                                             <img src="./assets/img/banner/big-3.png" alt="" class="">
                                         </div>
-                                        <div class="banner-btn">
+                                        <div class="banner-btn banner-btn--desktop">
                                             <a href="" class="banner-btn__link">
                                                 <div class="banner-btn__icon">
                                                     <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,6 +277,16 @@
                                                 <span class="banner-btn__text">Перейти в каталог</span>
                                             </a>
                                         </div>
+                                    </div>  
+                                    <div class="banner-btn banner-btn--mobile">
+                                        <a href="" class="banner-btn__link">
+                                            <div class="banner-btn__icon">
+                                                <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.5192 20.6156C16.0116 21.1281 15.1884 21.1281 14.6808 20.6156C14.1731 20.103 14.1731 19.272 14.6808 18.7594L21.5615 11.8125L1.3 11.8125C0.582031 11.8125 0 11.2249 0 10.5C0 9.77513 0.58203 9.1875 1.3 9.1875L21.5615 9.1875L14.6808 2.24058C14.1731 1.72802 14.1731 0.896986 14.6808 0.384423C15.1884 -0.128141 16.0116 -0.128141 16.5192 0.384423L25.6192 9.57192C26.1269 10.0845 26.1269 10.9155 25.6192 11.4281L16.5192 20.6156Z" />
+                                                </svg>
+                                            </div>
+                                            <span class="banner-btn__text">Перейти в каталог</span>
+                                        </a>
                                     </div>
                                     <div class="banner__brands" data-swiper-parallax="-300">
                                         <a href="" class="banner__brands-item">
@@ -293,21 +346,29 @@
                 <div class="advantages">
                     <div class="advantages__wrapper">
                         <div class="advantages__item">
-                            <img src="./assets/img/icons/adv-inStock.svg" alt="" class="advantages__item-icon">
+                            <div class="advantages__item-icon">
+                                <img src="./assets/img/icons/adv-inStock.svg" alt="">
+                            </div>
                             <p class="advantages__item-text">Спецтехника<br> 
                             в наличии</p>
                         </div>
                         <div class="advantages__item">
-                            <img src="./assets/img/icons/adv-official.svg" alt="" class="advantages__item-icon">
+                            <div class="advantages__item-icon">
+                                <img src="./assets/img/icons/adv-official.svg" alt="">
+                            </div>
                             <p class="advantages__item-text">Официальный<br>
                             поставщик</p>
                         </div>
                         <div class="advantages__item">
-                            <img src="./assets/img/icons/adv-delivery.svg" alt="" class="advantages__item-icon">
+                            <div class="advantages__item-icon">
+                                <img src="./assets/img/icons/adv-delivery.svg" alt="">
+                            </div>
                             <p class="advantages__item-text">Быстрая доставка<br> до Заказчика</p>
                         </div>
                         <div class="advantages__item">
-                            <img src="./assets/img/icons/adv-lizing.svg" alt="" class="advantages__item-icon">
+                            <div class="advantages__item-icon">
+                                <img src="./assets/img/icons/adv-lizing.svg" alt="">
+                            </div>
                             <p class="advantages__item-text">Выгодная покупка<br> в ЛИЗИНГ</p>
                         </div>
                     </div>
@@ -638,7 +699,7 @@
         </section>
 
         <!-- О нас -->
-        <section class="about-section">
+        <!-- <section class="about-section">
             <div class="about">
                 <div class="container">
                     <div class="about__top">
@@ -671,10 +732,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Форма консультация -->
-        <section class="consult-section">
+        <!-- <section class="consult-section">
             <div class="container">
                 <div class="consult">
                     <div class="consult__top">
@@ -709,23 +770,23 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Лизинг -->
         <section class="leasing-section">
             <div class="container">
                 <div class="leasing">
                     <div class="leasing__top">
-                        <p class="leasing__top-title">
+                        <h2 class="leasing__top-title">
                             СПЕЦТЕХНИКА<br>
                             <span>В ЛИЗИНГ</span> 
                             <span>Выгодные программы от ведущих лизинговых компаний России</span>
-                        </p>
+                        </h2>
                     </div>
                     <div class="leasing__bottom">
                         <p class="leasing__bottom-text">Вы выбираете техику и подаете заявку, мы рассмотрим и одобрим ее в течении 2 часов. Документы в бонк мы подадим сами.<br>
                         Вы приедите на подписание и оплату </p>
-                        <button class="leasing__bottom-btn">Отправить заявку</button>
+                        <button class="leasing__btn leasing__btn--desktop">Отправить заявку</button>
                     </div>
                 </div>
             </div>
@@ -753,10 +814,11 @@
                     </div>
                 </div>
             </div>
+            <button class="leasing__btn leasing__btn--mobile">Отправить заявку</button>
         </section>
 
         <!-- Лидеры продаж -->
-        <section class="leaders-section">
+        <!-- <section class="leaders-section">
             <div class="container">
                 <div class="swiper swiper-products">
                     <div class="swiper-products__top">
@@ -779,6 +841,51 @@
                         </div>
                     </div>
                     <div class="swiper-wrapper swiper-products__wrapper">
+                        <div class="swiper-slide swiper-products__slide">
+                            <div class="products-card">
+                                <div class="products-card__top">
+                                    <img src="./assets/img/products/card-2.png" class="products-card__top-img" alt="">
+                                    <div class="properties-card">
+                                        <ul class="properties-card__list">
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Высота выгрузки (по шарниру)</span>
+                                                <span class="properties-card__item-value">3 200 мм</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Тип органов управления:</span>
+                                                <span class="properties-card__item-value">Джойстик</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Стандартный объем ковша:</span>
+                                                <span class="properties-card__item-value">0,9 мᶟ</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="products-card__info">
+                                    <a href="#" class="products-card__info-title">LGCE LG918</a>
+                                    <p class="products-card__info-desc">Погрузчик фронтальный одноковшовый</p>
+                                    <div class="products-card__info-price-block">
+                                        <p class="products-card__info-price-block__price">2 770 000 ₽</p>
+                                        <button class="products-card__info-price-block__btn">Заказать</button>
+                                        <button class="fast-view-btn" title="Быстрый просмотр">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
+                                                <path d="M13.9998 24.5232C9.6131 24.5232 5.47143 21.9566 2.62477 17.4999C1.3881 15.5749 1.3881 12.4366 2.62477 10.4999C5.4831 6.04323 9.62477 3.47656 13.9998 3.47656C18.3748 3.47656 22.5164 6.04323 25.3631 10.4999C26.5998 12.4249 26.5998 15.5632 25.3631 17.4999C22.5164 21.9566 18.3748 24.5232 13.9998 24.5232ZM13.9998 5.22656C10.2314 5.22656 6.62643 7.4899 4.10643 11.4449C3.23143 12.8099 3.23143 15.1899 4.10643 16.5549C6.62643 20.5099 10.2314 22.7732 13.9998 22.7732C17.7681 22.7732 21.3731 20.5099 23.8931 16.5549C24.7681 15.1899 24.7681 12.8099 23.8931 11.4449C21.3731 7.4899 17.7681 5.22656 13.9998 5.22656Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="swiper-slide swiper-products__slide">
                             <div class="products-card">
                                 <div class="products-card__top">
@@ -809,11 +916,152 @@
                                     </div>
                                 </div>
                                 <div class="products-card__info">
-                                    <p class="products-card__info-title">LGCE LG918</p>
+                                    <a href="#" class="products-card__info-title">LGCE LG918</a>
                                     <p class="products-card__info-desc">Погрузчик фронтальный одноковшовый</p>
                                     <div class="products-card__info-price-block">
                                         <p class="products-card__info-price-block__price">2 770 000 ₽</p>
                                         <button class="products-card__info-price-block__btn">Заказать</button>
+                                        <button class="fast-view-btn" title="Быстрый просмотр">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
+                                                <path d="M13.9998 24.5232C9.6131 24.5232 5.47143 21.9566 2.62477 17.4999C1.3881 15.5749 1.3881 12.4366 2.62477 10.4999C5.4831 6.04323 9.62477 3.47656 13.9998 3.47656C18.3748 3.47656 22.5164 6.04323 25.3631 10.4999C26.5998 12.4249 26.5998 15.5632 25.3631 17.4999C22.5164 21.9566 18.3748 24.5232 13.9998 24.5232ZM13.9998 5.22656C10.2314 5.22656 6.62643 7.4899 4.10643 11.4449C3.23143 12.8099 3.23143 15.1899 4.10643 16.5549C6.62643 20.5099 10.2314 22.7732 13.9998 22.7732C17.7681 22.7732 21.3731 20.5099 23.8931 16.5549C24.7681 15.1899 24.7681 12.8099 23.8931 11.4449C21.3731 7.4899 17.7681 5.22656 13.9998 5.22656Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-products__slide">
+                            <div class="products-card">
+                                <div class="products-card__top">
+                                    <img src="./assets/img/products/card-3.png" class="products-card__top-img" alt="">
+                                    <div class="properties-card">
+                                        <ul class="properties-card__list">
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Высота выгрузки (по шарниру)</span>
+                                                <span class="properties-card__item-value">3 200 мм</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Тип органов управления:</span>
+                                                <span class="properties-card__item-value">Джойстик</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Стандартный объем ковша:</span>
+                                                <span class="properties-card__item-value">0,9 мᶟ</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="products-card__info">
+                                    <a href="#" class="products-card__info-title">LGCE LG918</a>
+                                    <p class="products-card__info-desc">Погрузчик фронтальный одноковшовый</p>
+                                    <div class="products-card__info-price-block">
+                                        <p class="products-card__info-price-block__price">2 770 000 ₽</p>
+                                        <button class="products-card__info-price-block__btn">Заказать</button>
+                                        <button class="fast-view-btn" title="Быстрый просмотр">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
+                                                <path d="M13.9998 24.5232C9.6131 24.5232 5.47143 21.9566 2.62477 17.4999C1.3881 15.5749 1.3881 12.4366 2.62477 10.4999C5.4831 6.04323 9.62477 3.47656 13.9998 3.47656C18.3748 3.47656 22.5164 6.04323 25.3631 10.4999C26.5998 12.4249 26.5998 15.5632 25.3631 17.4999C22.5164 21.9566 18.3748 24.5232 13.9998 24.5232ZM13.9998 5.22656C10.2314 5.22656 6.62643 7.4899 4.10643 11.4449C3.23143 12.8099 3.23143 15.1899 4.10643 16.5549C6.62643 20.5099 10.2314 22.7732 13.9998 22.7732C17.7681 22.7732 21.3731 20.5099 23.8931 16.5549C24.7681 15.1899 24.7681 12.8099 23.8931 11.4449C21.3731 7.4899 17.7681 5.22656 13.9998 5.22656Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-products__slide">
+                            <div class="products-card">
+                                <div class="products-card__top">
+                                    <img src="./assets/img/products/card-4.png" class="products-card__top-img" alt="">
+                                    <div class="properties-card">
+                                        <ul class="properties-card__list">
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Высота выгрузки (по шарниру)</span>
+                                                <span class="properties-card__item-value">3 200 мм</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Тип органов управления:</span>
+                                                <span class="properties-card__item-value">Джойстик</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Стандартный объем ковша:</span>
+                                                <span class="properties-card__item-value">0,9 мᶟ</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="products-card__info">
+                                    <a href="#" class="products-card__info-title">LGCE LG918</a>
+                                    <p class="products-card__info-desc">Погрузчик фронтальный одноковшовый</p>
+                                    <div class="products-card__info-price-block">
+                                        <p class="products-card__info-price-block__price">2 770 000 ₽</p>
+                                        <button class="products-card__info-price-block__btn">Заказать</button>
+                                        <button class="fast-view-btn" title="Быстрый просмотр">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
+                                                <path d="M13.9998 24.5232C9.6131 24.5232 5.47143 21.9566 2.62477 17.4999C1.3881 15.5749 1.3881 12.4366 2.62477 10.4999C5.4831 6.04323 9.62477 3.47656 13.9998 3.47656C18.3748 3.47656 22.5164 6.04323 25.3631 10.4999C26.5998 12.4249 26.5998 15.5632 25.3631 17.4999C22.5164 21.9566 18.3748 24.5232 13.9998 24.5232ZM13.9998 5.22656C10.2314 5.22656 6.62643 7.4899 4.10643 11.4449C3.23143 12.8099 3.23143 15.1899 4.10643 16.5549C6.62643 20.5099 10.2314 22.7732 13.9998 22.7732C17.7681 22.7732 21.3731 20.5099 23.8931 16.5549C24.7681 15.1899 24.7681 12.8099 23.8931 11.4449C21.3731 7.4899 17.7681 5.22656 13.9998 5.22656Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-products__slide">
+                            <div class="products-card">
+                                <div class="products-card__top">
+                                    <img src="./assets/img/products/card-4.png" class="products-card__top-img" alt="">
+                                    <div class="properties-card">
+                                        <ul class="properties-card__list">
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Высота выгрузки (по шарниру)</span>
+                                                <span class="properties-card__item-value">3 200 мм</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Тип органов управления:</span>
+                                                <span class="properties-card__item-value">Джойстик</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Стандартный объем ковша:</span>
+                                                <span class="properties-card__item-value">0,9 мᶟ</span>
+                                            </li>
+                                            <li class="properties-card__item">
+                                                <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                <span class="properties-card__item-value">1 800 кг</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="products-card__info">
+                                    <a href="#" class="products-card__info-title">LGCE LG918</a>
+                                    <p class="products-card__info-desc">Погрузчик фронтальный одноковшовый</p>
+                                    <div class="products-card__info-price-block">
+                                        <p class="products-card__info-price-block__price">2 770 000 ₽</p>
+                                        <button class="products-card__info-price-block__btn">Заказать</button>
+                                        <button class="fast-view-btn" title="Быстрый просмотр">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
+                                                <path d="M13.9998 24.5232C9.6131 24.5232 5.47143 21.9566 2.62477 17.4999C1.3881 15.5749 1.3881 12.4366 2.62477 10.4999C5.4831 6.04323 9.62477 3.47656 13.9998 3.47656C18.3748 3.47656 22.5164 6.04323 25.3631 10.4999C26.5998 12.4249 26.5998 15.5632 25.3631 17.4999C22.5164 21.9566 18.3748 24.5232 13.9998 24.5232ZM13.9998 5.22656C10.2314 5.22656 6.62643 7.4899 4.10643 11.4449C3.23143 12.8099 3.23143 15.1899 4.10643 16.5549C6.62643 20.5099 10.2314 22.7732 13.9998 22.7732C17.7681 22.7732 21.3731 20.5099 23.8931 16.5549C24.7681 15.1899 24.7681 12.8099 23.8931 11.4449C21.3731 7.4899 17.7681 5.22656 13.9998 5.22656Z" />
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -821,10 +1069,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__top">
@@ -989,10 +1237,11 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="./assets/libs/jquery.min.js"></script>
     <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <script src="./assets/libs/simplebar.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/swiper.js"></script>
 </body>

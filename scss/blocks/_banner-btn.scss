@@ -1,17 +1,33 @@
 .banner-btn {
-    position: absolute;
-    top: 160px;
-    left: 0;
+    &--desktop {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        
+        @media(max-width: $breakpoint768) {
+            display: none;
+        }
+    }
+    &--mobile {
+        display: none;
+        @media(max-width: $breakpoint768) {
+            display: flex;
+            margin-block-start: auto;
+        }
+    }
 
     &__link {
         display: flex;
         align-items: center;
         gap: 16px;
 
+        @media(max-width: $breakpoint480) {
+            gap: 12px;
+        }
+
         &:hover {
 
             & .banner-btn__icon {
-                // background: rgb(100%, 44%, 0%, .3);
                 background: transparent;
                 border: 1px solid $main-color;
 
@@ -33,6 +49,11 @@
 
         transition: all .3s;
 
+        @media(max-width: $breakpoint480) {
+            width: 60px;
+            height: 60px;
+        }
+
         & svg {
             fill: #fff;
 
@@ -43,5 +64,12 @@
         font-weight: 800;
         font-size: 20px;
         color: $black;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 18px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 16px;
+        }
     }
 }

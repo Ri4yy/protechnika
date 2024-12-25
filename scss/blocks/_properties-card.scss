@@ -1,9 +1,15 @@
 .properties-card {
     // display: none;
 
-    overflow-y: scroll;
+    position: absolute;
+    inset: 0;
+    transform: translateX(150%);transition: transform .3s;
+
+    background: #f0f0ef;
     height: inherit;
     width: 100%;
+
+    overscroll-behavior: contain;
 
     &__list {
         display: flex;

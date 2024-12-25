@@ -1,9 +1,17 @@
 .header-contacts {
     flex-shrink: 0;
+
+    @media(max-width: $breakpoint992) {
+        display: none;
+    }
     
     &__container {
         display: flex;
         gap: 24px;
+
+        @media(max-width: $breakpoint1248) {
+            display: none;
+        }
     }
 
     &__item {
@@ -31,6 +39,111 @@
             &::before {
                 content: url(../assets/img/icons/i-mail.svg);
                 height: 15px;
+            }
+        }
+    }
+
+    &__dropdown {
+        position: relative;
+        display: none;
+
+        @media(max-width: $breakpoint1248) {
+            display: block;
+        }
+
+        &-toggle {
+            height: 48px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &:hover {
+                & .header-contacts__dropdown-content {
+                    display: block;
+                }
+            }
+
+            &__link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 17px;
+                color: $black;
+
+                &::before {
+                    content: url(../assets/img/icons/i-phone.svg);
+                    height: 17px;
+                }
+            }
+            &__text {
+                display: none;
+
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 17px;
+                color: $black;
+            }
+
+            &.active {
+                & .header-contacts__dropdown-toggle__text { 
+                    display: block;
+                }
+                & .header-contacts__dropdown-toggle__link {
+                    display: none;
+                }
+            }
+        }
+
+        &-content {
+            display: none;
+            overflow: hidden;
+
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+
+            background: #fff;
+            border: 1px solid #a5a5a3;
+            border-radius: 12px;
+
+            &.active {
+                display: block;
+            }
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+        }
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 17px;
+            color: $black;
+            transition: background .3s;
+
+            padding: 18px 22px;
+
+            &::before {
+                content: url(../assets/img/icons/i-phone.svg);
+                height: 17px;
+            }
+
+            &--mail {
+                &::before {
+                    content: url(../assets/img/icons/i-mail.svg);
+                    height: 15px;
+                }
+            }
+
+            &:hover {
+                background: #fafafa;
             }
         }
     }

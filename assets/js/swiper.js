@@ -104,10 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const swiperProducts = new Swiper('.swiper-products', {
         // Optional parameters
         slidesPerView: 4,
+        spaceBetween: 48,
         enabled: true,
-        speed: 1200,
-        parallax: true,
-        grabCursor: true,
+        speed: 200,
       
         // If we need pagination
         pagination: {

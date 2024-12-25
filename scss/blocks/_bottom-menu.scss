@@ -24,6 +24,11 @@
             font-size: 18px;
             line-height: 120%;
             color: #9a9a98;
+            transition: color .2s;
+
+            &:hover {
+                color: #fff;
+            }
         } 
     }
 }

@@ -7,6 +7,10 @@
     border-radius: 12px;
     overflow: hidden;
 
+    @media(max-width: $breakpoint992) {
+        display: none;
+    }
+
     &__input {
         height: inherit;
         border-radius: inherit;

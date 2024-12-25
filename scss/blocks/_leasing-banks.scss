@@ -6,10 +6,28 @@
     background-position: center;
     background-size: cover;
 
+    @media(max-width: 1180px) {
+        padding: 20px 0;
+    }
+    @media(max-width: $breakpoint480) {
+        padding: 16px 0;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: end;
         gap: 40px;
+
+        @media(max-width: 1180px) {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: center;
+            gap: 24px;
+        }
+        @media(max-width: $breakpoint480) {
+            grid-template-columns: repeat(2, auto);
+            gap: 16px;
+        }
     }
 
     &__item {
