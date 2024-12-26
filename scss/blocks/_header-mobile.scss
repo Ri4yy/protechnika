@@ -1,0 +1,270 @@
+.header-mobile {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 6;
+
+    padding: 9px 12px 60px 12px;
+    overflow-y: scroll;
+    height: 100dvh;
+    width: 100%;
+
+    background-image: url(../assets/img/bg/f-bg.png);
+    background-color: #F8F8F8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media(max-width: $breakpoint480) {
+        background-image: url(../assets/img/bg/mobile-bg.png);
+    }
+
+    &.active {
+        display: block;
+    }
+
+    &__top {
+        display: flex;
+        align-items: end;
+
+        &-description {
+            position: relative;
+            padding-left: 21px;
+
+            @media(max-width: $breakpoint480) {
+                padding-left: 17px;
+            }
+
+            & > p {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 110%;
+                text-transform: uppercase;
+                color: #fff;
+
+                width: 135px;
+
+                @media(max-width: $breakpoint992) {
+                    font-size: 12px;
+                }
+                @media(max-width: $breakpoint480) {
+                    font-size: 10px;
+                    width: 100px;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 10px;
+                top: 0;
+
+                height: 100%;
+                width: 1px;
+                background: #fff;
+            }
+        }
+    }
+
+    &__menu {
+        margin-top: 24px;
+
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            display: flex;
+
+            border-bottom: 1px solid #9a9a98;
+
+            &--catalog {
+                display: flex;
+                flex-direction: column;
+
+                padding-bottom: 20px;
+            }
+
+            &__toggle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &.active {
+                    & .header-mobile__menu-item__toggle-text {
+                        color: $main-color;
+                    }
+                    & svg {
+                        fill: $main-color;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &-text {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: #fff;
+                    pointer-events: none;
+                }
+                & svg {
+                    fill: #fff;
+                    pointer-events: none;
+                    transition: all .3s;
+                }
+            }
+
+            &__link {
+                padding: 20px 0;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 130%;
+                color: #f8f8f8;
+            }
+        }
+
+        &-body {
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: all 0.3s;
+
+            &.active {
+                margin-top: 14px;
+                grid-template-rows: 1fr;
+            }
+        }
+        
+        &-2nd {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            min-height: 0;
+
+            &__item {
+                display: flex;
+
+                &-link {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: #f8f8f8;
+                }
+            }
+        }
+    }
+
+    &__phone {
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &-title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #9a9a98;
+        }
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #fff;
+
+            &::before {
+                content: url(../assets/img/icons/i-phone.svg);
+                height: 17px;
+            }
+        }
+    }
+
+    &__container {
+        margin-top: 28px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: $text-color;
+        }
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: #fff;
+
+        &--phone {
+            &::before {
+                content: url(../assets/img/icons/i-phone.svg);
+                height: 15px;
+            }
+        }
+        &--mail {
+            &::before {
+                content: url(../assets/img/icons/i-mail.svg);
+                height: 15px;
+            }
+        }
+    }
+
+    &__social-list {
+        margin-top: 20px;
+
+        display: flex;
+        gap: 10px;
+        width: fit-content;
+
+        &__item {
+        display: flex;
+
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(154, 154, 152, 0.89);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+
+            transition: all .3s;
+
+            &:hover {
+                background: rgb(100%, 44%, 0%, .3);
+                border-color: $main-color;
+            }
+
+            & svg {
+                fill: #F0F0EF;
+                max-width: 21px;
+            }
+        }
+    }
+    }
+}

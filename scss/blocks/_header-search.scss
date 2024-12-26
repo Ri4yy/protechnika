@@ -7,8 +7,17 @@
     border-radius: 12px;
     overflow: hidden;
 
-    @media(max-width: $breakpoint992) {
-        display: none;
+    &--desktop {
+        @media(max-width: $breakpoint992) {
+            display: none;
+        }
+    }
+    &--mobile {
+        margin-top: 20px;
+
+        & .header-search__input {
+            color: #fff;
+        }
     }
 
     &__input {

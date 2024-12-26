@@ -1,28 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let menu = document.querySelector('.menu'),
-    btnMenu = document.querySelector('.btn-menu');
+    let html  = document.querySelector('html'),
+        menu = document.querySelector('.header-mobile'),
+        btnMenu = document.querySelector('.btn-menu');
 
     btnMenu.addEventListener('click', (e) => {
-        // menu.classList.toggle('menu--open')
-
+        html.classList.toggle('no-scroll')
+        
+        menu.classList.toggle('active')
         btnMenu.classList.toggle('btn-menu--open')
     })
 
-    // function resize() {
-    //     let width = window.innerWidth;
+    function resize() {
+        let width = window.innerWidth;
 
-    //     if (width > 768) {
-    //         menu.classList.remove('menu--open')
-    //         btnMenu.classList.remove('btn-menu--open')
-    //     } else {
-    //         return
-    //     }
-    // }
+        if (width > 992) {
+            html.classList.remove('no-scroll')
+            menu.classList.remove('active')
+            btnMenu.classList.remove('btn-menu--open')
+        } else {
+            return
+        }
+    }
 
-    // window.addEventListener('resize', () => {
-    //     resize()
-    // })
-    // resize()
+    window.addEventListener('resize', () => {
+        resize()
+    })
+    resize()
+
+    // Mobile menu
+    let menuToggle = document.querySelector('.header-mobile__menu-item__toggle')
+
+    menuToggle.addEventListener('click', (e) => {
+        let menuContainer = e.target.closest('.header-mobile__menu-item')
+
+        menuToggle.classList.toggle('active')
+        menuContainer.querySelector('.header-mobile__menu-body').classList.toggle('active')
+    })
 
 
     function tabs(wrapperMain, wrapperTab, wrapperContent, activeTab, activeContent) {

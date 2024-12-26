@@ -61,6 +61,7 @@
 
     width: 24px;
     height: 16px;
+    z-index: 7;
 
     @media(max-width: $breakpoint992) {
         display: flex;
@@ -102,6 +103,8 @@
         overflow: hidden;
 
         & span {
+            background: #fff;
+            
             &:first-child {
                 display: block;
                 rotate: 45deg;
