@@ -73,14 +73,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const swiperBanner = new Swiper('.swiper-banner', {
-        // Optional parameters
         slidesPerView: 1,
         enabled: true,
         speed: 1200,
         parallax: true,
         grabCursor: true,
       
-        // If we need pagination
         pagination: {
             el: ".banner__counter",
             type: "custom",
@@ -102,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const swiperProducts = new Swiper('.swiper-products', {
-        // Optional parameters
         slidesPerView: 4,
         spaceBetween: 48,
         enabled: true,
@@ -156,4 +153,23 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-groups-prev',
         },
     });
+
+    const swiperFastView = new Swiper('.swiper-fast-view', {
+        speed: 200,
+      
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-fast-view__btn--next',
+          prevEl: '.swiper-fast-view__btn--prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
 })

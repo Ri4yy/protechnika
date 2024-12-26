@@ -59,11 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // scrollbar
-    // new SimpleBar($('.properties-card')[0], {
-    //     autoHide: false,
-    //     scrollbarMaxSize: 42
-    // });
-
     $('.properties-card').each((i, el) => {
         new SimpleBar($('.properties-card')[i], {
             autoHide: false,
@@ -75,10 +70,63 @@ document.addEventListener('DOMContentLoaded', () => {
     let dropdownToggle = document.querySelector('.header-contacts__dropdown-toggle'),
         dropdownContent = document.querySelector('.header-contacts__dropdown-content');
 
-
     dropdownToggle.addEventListener('click', (e) => {
         dropdownToggle.classList.toggle('active')
         dropdownContent.classList.toggle('active')
     })
 
+    // Modal
+    function showModal(btnOpen, modalBody) {
+        btnOpen.click(function () {
+            modalBody.addClass('active');
+            $('html').addClass('no-scroll');
+            return false;
+        });
+
+        $(document).keydown(function (e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                modalBody.removeClass('active');
+                $('html').removeClass('no-scroll');
+            }
+        });
+
+        modalBody.click(function (e) {
+            if ($(e.target).closest('.modal__wrapper').length == 0) {
+                $(this).removeClass('active');
+                $('html').removeClass('no-scroll');
+            }
+        });
+
+        $('.close-modal').click((e) => {
+            modalBody.removeClass('active');
+            $('html').removeClass('no-scroll');
+        })
+    }
+
+    showModal($('.fast-view-btn'), $('.fast-fiew-modal'));
+
+    // Fancybox
+    Fancybox.bind('[data-fancybox="fast-view"]', {
+        compact: false,
+        contentClick: "iterateZoom",
+        Images: {
+            Panzoom: {
+                maxScale: 2,
+            },
+        },
+        wheel: "slide",
+        Toolbar: {
+            display: {
+                left: [
+                    "infobar",
+                ],
+                middle: [],
+                right: [
+                    "iterateZoom",
+                    "close",
+                ],
+            }
+        }
+    });
 })

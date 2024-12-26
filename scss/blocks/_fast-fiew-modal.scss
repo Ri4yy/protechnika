@@ -1,0 +1,23 @@
+.fast-fiew-modal {
+    $modal-width: 910px;
+
+    &__body {
+        max-width: $modal-width;
+        width: 100%;
+
+        @media(max-width: calc($modal-width + 20px)) {
+            max-width: 98vw;
+        }
+    }
+    &__wrapper {
+        padding: 36px 28px;
+
+        @media(max-width: $breakpoint992) {
+            height: calc(100dvh - 70px);
+            overflow-y: auto;
+        }
+        @media(max-width: $breakpoint375) { 
+            padding: 36px 12px;
+        }
+    }
+}

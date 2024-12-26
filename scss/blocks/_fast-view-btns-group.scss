@@ -1,0 +1,44 @@
+.fast-view-btns-group {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 16px;
+
+    @media(max-width: $breakpoint992) { 
+        margin-top: 32px;
+    }
+    @media(max-width: $breakpoint480) { 
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__btn {
+        flex-grow: 1;
+        border-radius: 20px;
+        border: 1px solid $main-color;
+        padding: 15px 20px;
+
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        transition: all .3s;
+
+        &--send {
+            color: #fff;
+            background: $main-color;
+
+            &:hover {
+                background: transparent;
+                color: $black;
+            }
+        }
+        &--buy {
+            color: $black;
+
+            &:hover {
+                background: $main-color;
+                color: #fff;
+            }
+        }
+    }
+}
