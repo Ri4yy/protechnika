@@ -5,6 +5,11 @@
 
     overflow: hidden;
 
+    @media(max-width: $breakpoint480) {
+        max-width: 275px;
+        margin: 0 auto;
+    }
+
     &__top {
         position: relative;
         height: 200px;

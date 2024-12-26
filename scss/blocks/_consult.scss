@@ -4,16 +4,57 @@
     &__top {
         max-width: 720px;
 
+        @media(max-width: $breakpoint992) {
+            max-width: 520px;
+        }
+
         &-title {
             font-weight: 800;
             font-size: 48px;
             line-height: 130%;
             color: $black; 
+
+            @media(max-width: $breakpoint992) {
+                font-size: 44px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 36px;
+            }
+            @media(max-width: $breakpoint375) {
+                font-size: 30px;
+            }
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+            color: $text-color;
+
+            @media(max-width: $breakpoint992) {
+                font-size: 18px;
+                text-wrap-style: balance;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+
+            & br {
+                @media(max-width: $breakpoint992) {
+                    display: none;
+                }
+            }
         }
     }
 
     &__wrapper {
         display: flex;
+
+        @media(max-width: $breakpoint992) {
+            margin-top: 24px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 12px;
+        }
     }
     &__left {
         margin-top: $mt;
@@ -24,17 +65,33 @@
         flex-direction: column;
         flex-shrink: 0;
 
-        &-text {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 130%;
-            color: $text-color;
+        @media(max-width: $breakpoint992) {
+            margin: 0 auto;
+        }
+        @media(max-width: $breakpoint480) {
+            width: 100%;
+        }
+
+        &-img {
+            display: none;
+
+            @media(max-width: $breakpoint992) {
+                display: block;
+            }
+            @media(max-width: $breakpoint480) {
+                max-width: 275px;
+                margin: 0 auto;
+            }
         }
     }
     &__img {
         margin-top: -76px;
         display: flex;
         width: 100%;
+
+        @media(max-width: $breakpoint992) {
+            display: none;
+        }
 
         & img {
             object-fit: contain;

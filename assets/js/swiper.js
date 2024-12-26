@@ -107,8 +107,36 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 48,
         enabled: true,
         speed: 200,
+
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 0
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            660: {
+                slidesPerView: 2.5,
+                spaceBetween: 28
+            },
+
+
+            800: {
+                slidesPerView: 3,
+                spaceBetween: 28
+            },
+            960: {
+              slidesPerView: 3.5,
+              spaceBetween: 32
+            },
+            1120: {
+              slidesPerView: 4,
+              spaceBetween: 48
+            }
+        },
       
-        // If we need pagination
         pagination: {
             el: ".swiper-counter",
             type: "custom",

@@ -2,11 +2,42 @@
     display: grid;
     grid-template-columns: 192px 310px;
     justify-content: space-between;
+    gap: 16px;
+
+    @media(max-width: $breakpoint1024) {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+    @media(max-width: $breakpoint660) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
     &--top {
         margin-top: 44px;
+
+        @media(max-width: $breakpoint660) {
+            margin-top: 24px;
+
+            order: 1;
+        }
     }
     &--bottom {
         margin-top: 24px;
+
+        @media(max-width: $breakpoint660) {
+            margin-top: 14px;
+            gap: 14px;
+            order: 3;
+        }
+
+        & .footer-grid__col {
+            &:nth-of-type(1) {
+                @media(max-width: $breakpoint660) {
+                    order: 2;
+                    max-width: 290px;
+                }
+            }
+        }
     }
 }

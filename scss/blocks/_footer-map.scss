@@ -3,6 +3,10 @@
     height: 320px;
     overflow: hidden;
 
+    @media(max-width: $breakpoint480) {
+        height: 200px;
+    }
+
     & iframe {
         height: inherit;
         width: 100%;

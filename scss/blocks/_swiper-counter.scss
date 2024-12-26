@@ -3,6 +3,11 @@
     align-items: center;
     gap: 4px;
 
+    @media(max-width: $breakpoint768) {
+        width: fit-content;
+        order: 2;
+    }
+
     &__current {
         font-weight: 600;
         font-size: 48px;
