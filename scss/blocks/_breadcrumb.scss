@@ -16,6 +16,10 @@
             @media(max-width: $breakpoint480) {
                 font-size: 14px;
             }
+
+            &--active {
+                color: #696969;
+            }
         }
         &:first-child {
             & .breadcrumb__item-link{

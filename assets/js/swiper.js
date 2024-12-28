@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         centeredSlides: true,
         coverflowEffect: {
             rotate: 0,
-            stretch: 30,
+            stretch: 50,
             depth: 200,
             modifier: 1,
             slideShadows: false
