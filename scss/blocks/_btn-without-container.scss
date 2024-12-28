@@ -1,25 +1,7 @@
-.swiper-groups {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.btn-without-container {
+    display: none;
 
-    @media(max-width: $breakpoint768) { 
-        display: contents;
-    }
-
-    &--review {
-        display: flex;  
-        
-        @media (min-width: 600px) and (max-width: $breakpoint1024) {
-            display: none;
-        }
-    
-        @media(max-width: 600px) {
-            order: 2;
-        }
-    }
-
-    &__btn {
+    @media (min-width: 600px) and (max-width: $breakpoint1024) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,12 +23,12 @@
                 fill: $main-color;
             }
             
-            &.swiper-groups-next {
+            &.btn-without-container-next {
                 & svg {
                     transform: translateX(3px);
                 }
             }
-            &.swiper-groups-prev {
+            &.btn-without-container-prev {
                 & svg {
                     transform: translateX(-3px);
                 }
@@ -57,9 +39,5 @@
             fill: $black;
             transition: transform .3s;
         }
-    }
-
-    &-next {
-        order: 3;
     }
 }

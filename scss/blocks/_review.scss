@@ -1,0 +1,37 @@
+.review {
+
+    &__title {
+        display: none;
+
+        font-weight: 800;
+        font-size: 44px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $black;
+
+        @media(max-width: $breakpoint1024) {
+            display: block;
+            font-size: 40px;
+        }
+        @media(max-width: $breakpoint768) {
+            font-size: 36px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 32px;
+        }
+    }
+
+    &__container {
+        display: contents;
+
+        @media (min-width: 600px) and (max-width: $breakpoint1024) {
+            margin-top: 38px;
+
+            display: grid;
+            grid-template-columns: 50px auto 50px; 
+            align-items: center;
+    
+            gap: 8px;
+        }
+    }
+}

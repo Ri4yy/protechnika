@@ -1,0 +1,93 @@
+.product-properties {
+
+    @media(max-width: $breakpoint992) { 
+        margin-top: 0;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        color: $black;
+
+        @media(max-width: $breakpoint992) { 
+            font-size: 20px;
+        }
+    }
+
+    &__list {
+        margin-top: 22px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        container: properties / inline-size;
+
+        @media(max-width: $breakpoint1248) {
+            margin-top: 16px;
+        }
+        @media(max-width: $breakpoint992) { 
+            margin-top: 10px;
+            gap: 4px;
+        }
+        @media(min-width: $breakpoint768) {
+            @container properties (max-width: 380px) {
+                & .product-properties__item {
+                  flex-direction: column;
+                  align-items: start;
+                  gap: 2px;
+                }
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        @media(max-width: $breakpoint992) { 
+            font-size: 16px;
+        }
+        @media(max-width: $breakpoint375) { 
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+
+        &-name {
+            font-weight: 400;
+            font-size: 20px;
+            color: $text-color;
+
+            @media(max-width: $breakpoint1248) {
+                font-size: 18px;
+            }
+            @media(max-width: $breakpoint992) { 
+                font-size: 16px;
+            }
+            @media(max-width: $breakpoint480) { 
+                font-size: 14px;
+            }
+        }
+        &-value {
+            font-weight: 500;
+            font-size: 20px;
+            color: $black;
+
+            min-width: 220px;
+            flex-shrink: 1;
+
+            @media(max-width: $breakpoint1248) {
+                font-size: 18px;
+                min-width: 160px;
+            }
+            @media(max-width: $breakpoint992) { 
+                min-width: auto;
+            }
+            @media(max-width: $breakpoint480) { 
+                font-size: 14px;
+            }
+        }
+    }
+}

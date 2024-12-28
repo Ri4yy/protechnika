@@ -22,6 +22,8 @@ h1 {
     line-height: 130%;
     color: $black;
 
+    text-wrap-style: balance;
+
     & span {
         color: $main-color;
     }
@@ -63,6 +65,9 @@ h3 {
     &__inner {
         margin-top: 60px;
 
+        @media(max-width: $breakpoint1024) {
+            margin-top: 40px;
+        }
         @media(max-width: $breakpoint768) {
             margin-top: 32px;
         }

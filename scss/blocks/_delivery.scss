@@ -1,0 +1,21 @@
+.delivery {
+
+
+    &__text {
+        margin-top: 36px;
+        max-width: 824px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        color: $text-color;
+
+        @media(max-width: $breakpoint768) { 
+            margin-top: 20px;
+        }
+        @media(max-width: $breakpoint480) { 
+            margin-top: 16px;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.product-hits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+
+    @media(max-width: $breakpoint768) { 
+        gap: 12px;
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 16px;
+        color: $main-color;
+
+        border: 1px solid $main-color;
+        border-radius: 12px;
+        padding: 5px 14px;
+
+        &--fill {
+            color: #fff;
+            background: $main-color;
+        }
+    }
+}

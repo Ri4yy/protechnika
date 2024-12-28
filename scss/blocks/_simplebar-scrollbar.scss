@@ -14,9 +14,27 @@
     }
 }
 
-.simplebar-track.simplebar-vertical {
-    right: -7px;
-    width: 5px;
-    background: #DADADA;
-    border-radius: 5px;
+.simplebar-vertical.simplebar-track {
+
+    &__card {
+        right: -7px;
+        width: 5px;
+        background: #DADADA;
+        border-radius: 5px;
+    }
+    &__menu {
+        margin-top: 30px;
+        height: 300px;
+        width: 5px;
+        background: #DADADA;
+        border-radius: 5px;
+    }
+    &__content {
+        right: -32px;
+        margin-top: 30px;
+        height: 400px;
+        width: 5px;
+        background: #DADADA;
+        border-radius: 5px;
+    }
 }

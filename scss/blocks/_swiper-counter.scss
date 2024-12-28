@@ -3,8 +3,9 @@
     align-items: center;
     gap: 4px;
 
+    width: fit-content;
+
     @media(max-width: $breakpoint768) {
-        width: fit-content;
         order: 2;
     }
 

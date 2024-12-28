@@ -1,0 +1,44 @@
+.swiper-product {
+
+    &__slide {
+        aspect-ratio: 1;
+        background: #f0f0ef;
+        border: 2px solid #cdcdcc;
+
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100%;
+        }
+        &-img {
+            object-fit: contain;
+        }
+    }
+    &__pagination {
+        margin-top: 12px;
+
+        position: relative;
+        top: auto !important;
+        bottom: 0 !important;
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 0;
+        }
+
+        & .swiper-pagination-bullet {
+            margin: 0 6px !important;
+            width: 36px;
+            height: 6px;
+            opacity: 1;
+
+            border-radius: 3px;
+            background: #9a9a98;
+
+            &-active {
+                background: $main-color;
+            }
+        }
+    }
+}

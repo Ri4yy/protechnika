@@ -1,0 +1,62 @@
+.product-btns-group {
+    container: btns / inline-size;
+
+    &__wrapper {
+        display: flex;
+        gap: 40px;
+
+        @media(max-width: $breakpoint992) { 
+            gap: 20px;
+        }
+    }
+
+    &__btn {
+        max-width: 260px;
+        width: 100%;
+        
+        border-radius: 25px;
+        border: 1px solid $main-color;
+        padding: 20px 26px;
+
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        transition: all .3s;
+
+        @media(max-width: $breakpoint1248) {
+            padding: 18px 24px;
+        }
+        @media(max-width: $breakpoint992) { 
+            padding: 15px 24px;
+            border-radius: 20px;
+        }
+
+        &--send {
+            color: #fff;
+            background: $main-color;
+
+            &:hover {
+                background: transparent;
+                color: $black;
+            }
+        }
+        &--buy {
+            color: $black;
+
+            &:hover {
+                background: $main-color;
+                color: #fff;
+            }
+        }
+    }
+
+    @container btns (max-width: 460px) {
+        &__wrapper {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__btn {
+            max-width: 100%;
+        }
+    }
+}

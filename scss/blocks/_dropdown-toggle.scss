@@ -4,6 +4,20 @@
     border-radius: 12px;
     height: 48px;
 
+    &.active {
+        background: rgb(100%, 44%, 0%, .1);
+        border: 1px solid $main-color;
+
+        & .dropdown-toggle__name {
+            color: $main-color;
+
+            &::before {
+                content: url(../assets/img/icons/i-menuActive.svg);
+                height: 20px;
+            }
+        }
+    }
+
     &__name {
         display: flex;
         align-items: center;
