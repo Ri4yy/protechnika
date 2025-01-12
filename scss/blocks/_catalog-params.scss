@@ -1,0 +1,20 @@
+.catalog-params {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &-name {
+            min-width: 144px;
+
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 130%;
+            color: $black;
+        }
+    }
+}

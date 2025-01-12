@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // scrollbar
-    let propCard = document.querySelectorAll('.properties-card'),
+    let propCard = document.querySelectorAll('.swiper-products__slide .products-card .properties-card'),
+        catalogPropCard = document.querySelectorAll('.catalog-list__item .products-card .properties-card'),
         menuCard = document.querySelector('.menu-dropdown__content'),
         sidebarCard = document.querySelector('.menu-dropdown__sidebar');
 
@@ -112,6 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollbarMaxSize: 42,
             classNames: {
                 track: 'simplebar-track simplebar-track__card'
+            }
+        });
+    })
+    catalogPropCard.forEach((card) => {
+        new SimpleBar(card, {
+            autoHide: false,
+            scrollbarMaxSize: 42,
+            classNames: {
+                track: 'simplebar-track simplebar-track__catalog-card'
             }
         });
     })

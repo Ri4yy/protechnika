@@ -1,0 +1,21 @@
+.catalog-list {
+
+    &__wrapper {
+        display: grid;
+
+        &--col {
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 42px;
+        }
+        &--row {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+    }
+    &__item {
+
+        & .products-card {
+            padding: 8px 24px 28px 24px;
+        }
+    }
+}
