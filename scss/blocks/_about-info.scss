@@ -1,0 +1,107 @@
+.about-info {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 74px;
+
+        @media(max-width: $breakpoint768) {
+            gap: 64px;
+        }
+        @media(max-width: $breakpoint480) {
+            gap: 50px;
+        }
+    }
+    &__row {
+
+    }
+    &__inner {
+        margin-top: 26px;
+    }
+    &__description {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        color: #9a9a98;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 18px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 16px;
+        }
+
+        &--bottom {
+            margin-top: 56px;
+
+            @media(max-width: $breakpoint768) {
+                margin-top: 40px;
+            }
+            @media(max-width: $breakpoint480) {
+                margin-top: 36px;
+            }
+        }
+    }
+    &__text {
+        margin-top: 40px;
+
+        padding-left: 40px;
+        margin-left: 40px;
+
+        border-left: 2px solid $main-color;
+
+        @media(max-width: $breakpoint480) {
+            padding-left: 20px;
+            margin: 27px 0 0 20px;
+        }
+
+        & span {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            color: $black;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 18px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 40px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 36px;
+            gap: 20px;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        &::before {
+            content: url(../assets/img/icons/i-listDone.svg);
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 20px;
+            color: $black;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 18px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -29,17 +29,20 @@
             background-repeat: no-repeat;
             background-position: 50%;
         }
+        &:not(:checked) + span {
+            color: $text-color;
+        }
     }
     & span {
         display: inline-block;
         position: relative; 
-        padding: 0 0 0 35px; 
-        line-height: 24px;   
+        padding: 0 0 0 30px; 
+        line-height: 22px;   
         
-        font-weight: 500;
+        font-weight: 600;
         font-size: 16px;
-        line-height: 150%;
-        color: $text-color;
+        line-height: 130%;
+        color: $black;
 
         @media(max-width: $breakpoint1024) {
             font-size: 14px;
@@ -67,8 +70,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            border: 1px solid $text-color;
-            border-radius: 6px;
+            border: 1px solid #A3A3A1;
         }
     }
 }

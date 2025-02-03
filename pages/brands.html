@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бренды</title>
+
+    <link rel="stylesheet" href="../assets/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/libs/simplebar.css">
+    <link rel="stylesheet" href="../assets/libs/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="header" id="top">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__top">
+                    <div class="header__top-region">
+                        <img src="../assets/img/icons/map-pin.svg" class="header__top-region__icon" alt="">
+                        <p class="header__top-region__name">Чебоксары</p>
+                    </div>
+                    <nav class="menu">
+                        <ul class="menu-nav">
+                            <li class="menu-nav__item">
+                                <a href="./catalog.html" class="menu-nav__link">Каталог</a>
+                            </li>
+                            <li class="menu-nav__item">
+                                <a href="#" class="menu-nav__link menu-nav__link--active">Бренды</a>
+                            </li>
+                            <li class="menu-nav__item">
+                                <a href="./leasing.html" class="menu-nav__link">Лизинг</a>
+                            </li>
+                            <li class="menu-nav__item">
+                                <a href="./about.html" class="menu-nav__link">О компании</a>
+                            </li>
+                            <li class="menu-nav__item">
+                                <a href="./contacts.html" class="menu-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__top-phone">
+                        <span class="header__top-phone__title">Бесплатный звонок по России</span>
+                        <a href="tel:88000000000" class="header__top-phone__link">8 (800) 000-00-00</a>
+                    </div>
+                </div>
+
+                <div class="header__bottom">
+                    <div class="header__bottom-left">
+                        <a href="../index.html" class="logo">
+                            <img src="../assets/img/icons/h-logo.svg" alt="">
+                        </a>
+                        <div class="header__bottom-left__description">
+                            <p>
+                                надёжный партнёр в мире спецтехники  
+                            </p>
+                        </div>
+                    </div>
+                    <div class="burger">
+                        <button class="dropdown-toggle">
+                            <span class="dropdown-toggle__name">Каталог</span>
+                        </button>
+                    </div>
+                    <div class="header-search header-search--desktop">
+                        <input type="text" name="q" placeholder="Поиск" class="header-search__input">
+                        <button class="header-search__btn" type="submit">
+                            <img src="../assets/img/icons/i-search.svg" alt="">
+                        </button>
+                    </div>
+                    
+                    <div class="header-contacts">
+                        <div class="header-contacts__container">
+                            <div class="header-contacts__item">
+                                <a href="tel:88350000000" class="header-contacts__link header-contacts__link--phone">8 (835) 000-00-00</a>
+                                <a href="tel:88350000000" class="header-contacts__link header-contacts__link--phone">8 (835) 000-00-00</a>
+                            </div>
+                            <div class="header-contacts__item">
+                                <a href="mailto:protehnika@yandex.ru" class="header-contacts__link header-contacts__link--mail">protehnika@yandex.ru</a>
+                            </div>
+                        </div>
+                        <div class="header-contacts__dropdown">
+                            <div class="header-contacts__dropdown-toggle">
+                                <a href="tel:" class="header-contacts__dropdown-toggle__link">8 (835) 000-00-00</a>
+                                <span class="header-contacts__dropdown-toggle__text">Скрыть контакты</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="3" viewBox="0 0 5 3">
+                                    <path class="cls-1" d="M250,80h5l-2.5,3Z" transform="translate(-250 -80)"></path>
+                                </svg>
+                            </div>
+                            <div class="header-contacts__dropdown-content">
+                                <ul class="header-contacts__dropdown-list">
+                                    <li class="header-contacts__dropdown-item">
+                                        <a href="tel:" class="header-contacts__dropdown-link">8 (835) 000-00-00</a>
+                                    </li>
+                                    <li class="header-contacts__dropdown-item">
+                                        <a href="tel:" class="header-contacts__dropdown-link">8 (835) 000-00-00</a>
+                                    </li>
+                                    <li class="header-contacts__dropdown-item">
+                                        <a href="mailto:" class="header-contacts__dropdown-link header-contacts__dropdown-link--mail">protehnika@yandex.ru</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <div class="menu-dropdown">
+                    <div class="menu-dropdown__container">
+                        <div class="menu-dropdown__sidebar">
+                            <ul class="menu-dropdown__sidebar-list">
+                                <li class="menu-dropdown__sidebar-item">
+                                    <button class="menu-dropdown__sidebar-link active">
+                                        <span class="menu-dropdown__sidebar-link__title">Тракторная техника</span>
+                                        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.0001 7L2.2465 1.20098e-07L0.185547 1.64576L6.88545 7L0.185547 12.3531L2.24504 14L11.0001 7Z" />
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="menu-dropdown__sidebar-item">
+                                    <button class="menu-dropdown__sidebar-link">
+                                        <span class="menu-dropdown__sidebar-link__title">Погрузчики</span>
+                                        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.0001 7L2.2465 1.20098e-07L0.185547 1.64576L6.88545 7L0.185547 12.3531L2.24504 14L11.0001 7Z" />
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="menu-dropdown__sidebar-item">
+                                    <button class="menu-dropdown__sidebar-link">
+                                        <span class="menu-dropdown__sidebar-link__title">Дорожно-строительная техника</span>
+                                        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.0001 7L2.2465 1.20098e-07L0.185547 1.64576L6.88545 7L0.185547 12.3531L2.24504 14L11.0001 7Z" />
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="menu-dropdown__sidebar-item">
+                                    <button class="menu-dropdown__sidebar-link">
+                                        <span class="menu-dropdown__sidebar-link__title">Коммунальная техника</span>
+                                        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.0001 7L2.2465 1.20098e-07L0.185547 1.64576L6.88545 7L0.185547 12.3531L2.24504 14L11.0001 7Z" />
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="menu-dropdown__sidebar-item">
+                                    <button class="menu-dropdown__sidebar-link">
+                                        <span class="menu-dropdown__sidebar-link__title">Самосвалы</span>
+                                        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.0001 7L2.2465 1.20098e-07L0.185547 1.64576L6.88545 7L0.185547 12.3531L2.24504 14L11.0001 7Z" />
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-dropdown__content">
+                            <div class="menu-subsection">
+                                <a href="" class="menu-subsection__item">
+                                    <img src="../assets/img/menu/menu-1.png" alt="" class="menu-subsection__item-icon">
+                                    <p class="menu-subsection__item-text">Колесные тракторы <span>(15)</span></p>
+                                </a>
+                                <a href="" class="menu-subsection__item">
+                                    <img src="../assets/img/menu/menu-2.png" alt="" class="menu-subsection__item-icon">
+                                    <p class="menu-subsection__item-text">Гусеничные тракторы <span>(15)</span></p>
+                                </a>
+                                <a href="" class="menu-subsection__item">
+                                    <img src="../assets/img/menu/menu-3.png" alt="" class="menu-subsection__item-icon">
+                                    <p class="menu-subsection__item-text">Трелевочные тракторы <span>(15)</span></p>
+                                </a>
+                                <a href="" class="menu-subsection__item">
+                                    <img src="../assets/img/menu/menu-4.png" alt="" class="menu-subsection__item-icon">
+                                    <p class="menu-subsection__item-text">Минитракторы <span>(15)</span></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-mobile">
+                    <div class="header-mobile__top">
+                        <a href=".../index.html" class="logo">
+                            <img src="../assets/img/icons/f-logo.svg" alt="">
+                        </a>
+                        <div class="header-mobile__top-description">
+                            <p>
+                                надёжный партнёр в мире спецтехники  
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-mobile__phone">
+                        <span class="header-mobile__phone-title">Бесплатный звонок по России</span>
+                        <a href="tel:88000000000" class="header-mobile__phone-link">8 (800) 000-00-00</a>
+                    </div>
+
+                    <div class="header-search header-search--mobile">
+                        <input type="text" name="q" placeholder="Поиск" class="header-search__input">
+                        <button class="header-search__btn" type="submit">
+                            <img src="../assets/img/icons/i-search.svg" alt="">
+                        </button>
+                    </div>
+
+                    <ul class="header-mobile__menu">
+                        <li class="header-mobile__menu-item header-mobile__menu-item--catalog">
+                            <button class="header-mobile__menu-item__toggle">
+                                <span class="header-mobile__menu-item__toggle-text">Каталог</span>
+                                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10L18 1.90572L15.884 0L9 6.19529L2.11747 0L0 1.90438L9 10Z" />
+                                </svg>
+                            </button>
+                            <div class="header-mobile__menu-body">
+                                <ul class="header-mobile__menu-2nd">
+                                    <li class="header-mobile__menu-2nd__item">
+                                        <a href="" class="header-mobile__menu-2nd__item-link">Тракторная техника</a>
+                                    </li>
+                                    <li class="header-mobile__menu-2nd__item">
+                                        <a href="" class="header-mobile__menu-2nd__item-link">Погрузчики</a>
+                                    </li>
+                                    <li class="header-mobile__menu-2nd__item">
+                                        <a href="" class="header-mobile__menu-2nd__item-link">Дорожно-строительная техника</a>
+                                    </li>
+                                    <li class="header-mobile__menu-2nd__item">
+                                        <a href="" class="header-mobile__menu-2nd__item-link">Коммунальная техника</a>
+                                    </li>
+                                    <li class="header-mobile__menu-2nd__item">
+                                        <a href="" class="header-mobile__menu-2nd__item-link">Самосвалы</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="#" class="header-mobile__menu-item__link">Бренды</a>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="./leasing.html" class="header-mobile__menu-item__link">Лизинг</a>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="./about.html" class="header-mobile__menu-item__link">О компании</a>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="./contacts.html" class="header-mobile__menu-item__link">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <div class="header-mobile__container">
+                        <div class="header-mobile__item">
+                            <p class="header-mobile__item-title">Отдел продаж</p>
+                            <div class="header-mobile__col">
+                                <a href="tel:88350000000" class="header-mobile__link header-mobile__link--phone">8 (835) 000-00-00</a>
+                                <a href="tel:88350000000" class="header-mobile__link header-mobile__link--phone">8 (835) 000-00-00</a>
+                            </div>
+                        </div>
+                        <div class="header-mobile__item">
+                            <p class="header-mobile__item-title">Почта</p>
+                            <div class="header-mobile__col">
+                                <a href="mailto:protehnika@yandex.ru" class="header-mobile__link header-mobile__link--mail">protehnika@yandex.ru</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="header-mobile__social-list">
+                        <li class="header-mobile__social-list__item">
+                            <a href="">
+                                <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5613 26.9063H13.5558C11.305 26.9055 9.09342 26.3408 7.12915 25.2694L0 27.1395L1.90788 20.1707C0.731007 18.1312 0.111742 15.8177 0.112751 13.4475C0.115701 6.03259 6.14862 0 13.5612 0C17.1588 0.00155268 20.5354 1.40208 23.0744 3.94409C25.6134 6.48598 27.011 9.86476 27.0096 13.4581C27.0066 20.8713 20.9761 26.9032 13.5613 26.9063ZM7.46 22.8349L7.86817 23.0771C9.58434 24.0955 11.5516 24.6344 13.5573 24.6352H13.5619C19.7227 24.6352 24.737 19.6208 24.7394 13.4574C24.7406 10.4707 23.5791 7.66238 21.4687 5.54955C19.3583 3.43673 16.5518 2.2726 13.5663 2.27157C7.40069 2.27157 2.38634 7.28546 2.38389 13.4484C2.38303 15.5604 2.97398 17.6173 4.09289 19.397L4.35866 19.8199L3.22946 23.9446L7.46 22.8349ZM19.876 16.3538C20.1103 16.4671 20.2686 16.5436 20.3362 16.6564C20.4201 16.7965 20.4201 17.4693 20.1403 18.2543C19.8601 19.0392 18.5177 19.7556 17.872 19.852C17.2931 19.9386 16.5605 19.9747 15.7556 19.7189C15.2675 19.5641 14.6417 19.3573 13.84 19.0111C10.6898 17.6508 8.56088 14.5976 8.15852 14.0206C8.13034 13.9801 8.11062 13.9519 8.09963 13.9372L8.09691 13.9335C7.91908 13.6963 6.72754 12.1065 6.72754 10.4611C6.72754 8.91325 7.48786 8.10195 7.83783 7.72851C7.86181 7.70293 7.88386 7.6794 7.90361 7.65782C8.21161 7.32141 8.57568 7.2373 8.79968 7.2373C9.02367 7.2373 9.24793 7.23938 9.44371 7.24921C9.46787 7.25042 9.493 7.25027 9.51898 7.25012C9.7148 7.24897 9.95892 7.24754 10.1998 7.82603C10.2924 8.04866 10.428 8.3787 10.571 8.7268C10.8601 9.43075 11.1796 10.2085 11.2358 10.3211C11.3198 10.4893 11.3758 10.6854 11.2638 10.9098C11.247 10.9434 11.2314 10.9752 11.2166 11.0055C11.1325 11.1773 11.0706 11.3036 10.9278 11.4703C10.8716 11.5359 10.8136 11.6065 10.7556 11.6772C10.64 11.818 10.5244 11.9588 10.4237 12.0591C10.2555 12.2266 10.0804 12.4084 10.2764 12.7448C10.4724 13.0812 11.1468 14.1816 12.1458 15.0726C13.2196 16.0304 14.1529 16.4353 14.6259 16.6405C14.7183 16.6805 14.7931 16.713 14.848 16.7405C15.1839 16.9087 15.38 16.8806 15.576 16.6564C15.772 16.4321 16.416 15.6751 16.64 15.3388C16.864 15.0025 17.0881 15.0585 17.396 15.1706C17.7041 15.2829 19.3562 16.0957 19.6922 16.2639C19.7578 16.2967 19.8191 16.3263 19.876 16.3538Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-mobile__social-list__item">
+                            <a href="">
+                                <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.407794 10.6985C3.16998 9.13363 6.25331 7.82748 9.13423 6.51469C14.0905 4.36444 19.0665 2.25146 24.0927 0.284299C25.0706 -0.0508654 26.8277 -0.378597 27 1.11195C26.9056 3.2219 26.5175 5.31949 26.2513 7.41708C25.5757 12.0299 24.7947 16.6269 24.0332 21.2245C23.7708 22.756 21.9057 23.5487 20.7122 22.5686C17.8441 20.576 14.9539 18.6027 12.1224 16.5639C11.1949 15.5945 12.055 14.2024 12.8834 13.5101C15.2456 11.1156 17.7509 9.08124 19.9897 6.56299C20.5936 5.06305 18.8092 6.32715 18.2206 6.71451C14.9867 9.00673 11.8319 11.4389 8.42226 13.4535C6.68063 14.4395 4.65074 13.5969 2.9099 13.0466C1.34906 12.3819 -0.938209 11.7122 0.407636 10.6987L0.407794 10.6985Z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Бренды -->
+        <section class="brands-section">
+            <div class="container">
+                <div class="brands">
+                    <h1 class="brands__title">БРЕНДЫ</h1>
+                    <div class="brands__wrapper">
+                        <div class="brands__item">
+                            <div class="brands__item-icon">
+                                <img src="../assets/img/brand/jcb.png" alt="">
+                            </div>
+                            <ul class="brands__item-list">
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Экскаваторы погрузчики</a>
+                                </li>
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Телескопические погрузчики</a>
+                                </li>
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Мини экскаваторы</a>
+                                </li>
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Экскаваторы</a>
+                                </li>
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Вилочные погрузчики</a>
+                                </li>
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Фронтальные погрузчики</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="brands__item">
+                            <div class="brands__item-icon">
+                                <img src="../assets/img/brand/terex.png" alt="">
+                            </div>
+                            <ul class="brands__item-list">
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Экскаваторы погрузчики</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="brands__item">
+                            <div class="brands__item-icon">
+                                <img src="../assets/img/brand/volvo.png" alt="">
+                            </div>
+                            <ul class="brands__item-list">
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Экскаваторы погрузчики</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="brands__item">
+                            <div class="brands__item-icon">
+                                <img src="../assets/img/brand/nh.png" alt="">
+                            </div>
+                            <ul class="brands__item-list">
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Экскаваторы погрузчики</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="brands__item">
+                            <div class="brands__item-icon">
+                                <img src="../assets/img/brand/case.png" alt="">
+                            </div>
+                            <ul class="brands__item-list">
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Экскаваторы погрузчики</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="brands__item">
+                            <div class="brands__item-icon">
+                                <img src="../assets/img/brand/caterpilar.png" alt="">
+                            </div>
+                            <ul class="brands__item-list">
+                                <li class="brands__item-list__item">
+                                    <a href="" class="brands__item-list__link">Экскаваторы погрузчики</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="brands__more">Развернуть</button>
+                </div>
+            </div>     
+        </section>
+
+        <!-- Информация о брендах -->
+        <div class="brands-info-section">
+            <div class="container">
+                <div class="brands-info">
+                    <h2 class="second-title second-title--md brands-info__title">Преимущества покупки спецтехники представленных брендов в нашей компании</h2>
+                    <div class="brands-info__description">
+                        <p>Как официальный представитель производителей, мы предлагаем лучшие условия покупки, выгодные финансовые программы. Мы организовываем бесперебойные поставки запчастей, расходных материалов и дополнительного оборудования. Мы согласовываем обслуживание спецтехники во всех регионах России на авторизованных СТО.<br>
+                        Для крупных клиентов мы разрабатываем коммерческие предложения в индивидуальном порядке с учетом специфики потребностей, поставленных задач. Все наши клиенты получают пожизненное бесплатное техническое консультирование. Мы организовываем доставку специальных машин и оборудования во все регионы России.<br>
+                        Предлагаем вам познакомиться с ассортиментом спецтехники представленных брендов в нашем каталоге. Дополнительную информацию можно получить у наших менеджеров по указанным телефонным номерам. Мы в любой момент готовы к обсуждению и согласованию деталей поставок на самых выгодных условиях.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма консультация -->
+        <section class="consult-section">
+            <div class="container">
+                <div class="consult">
+                    <div class="consult__top">
+                        <h2 class="consult__top-title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h2>
+                        <p class="consult__top-text">Заполните форму и наш<br> специалист свяжется с вами</p>
+                    </div>
+                    <div class="consult__wrapper">
+                        <div class="consult__left">
+                            <img src="../assets/img/photo/consult.png" alt="" class="consult__left-img">
+                            <form action="" class="form consult-form">
+                                <div class="consult-form__wrapper">
+                                    <input type="text" class="input consult-form__input" name="name" placeholder="Ваше имя">
+                                    <input type="tel" class="input consult-form__input" name="phone" placeholder="Номер телефона">
+                                </div>
+                                <div class="consult-form__bottom">
+                                    <button class="consult-form__btn">
+                                        <div class="consult-form__btn-icon">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5163 10.8174C14.5189 11.3536 14.0863 11.7862 13.5501 11.7836C13.0139 11.781 12.5771 11.3443 12.5746 10.8081L12.5398 3.54093L1.89131 14.1894C1.51398 14.5668 0.89926 14.5638 0.5183 14.1829C0.137341 13.8019 0.134401 13.1872 0.511731 12.8098L11.1602 2.16136L3.89305 2.12658C3.35686 2.12402 2.92011 1.68727 2.91754 1.15108C2.91498 0.614884 3.34757 0.182294 3.88376 0.18486L13.4948 0.230847C14.031 0.233412 14.4677 0.67016 14.4703 1.20635L14.5163 10.8174Z" />
+                                            </svg>
+                                        </div>
+                                        <span class="consult-form__btn-text">Отправить</span>
+                                    </button>
+                                    <span class="consult-form__confirm">
+                                        Нажимая на кнопку “Отправить”, вы соглашаетесь на обработку персональных данных
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="consult__img">
+                            <img src="../assets/img/photo/consult.png" alt="" class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__top">
+                    <div class="footer__left">
+                        <div class="footer__left-logo-block">
+                            <a href="../index.html" class="logo">
+                                <img src="../assets/img/icons/f-logo.svg" alt="">
+                            </a>
+                            <div class="footer__left-logo-block__description">
+                                <p>
+                                    надёжный партнёр в мире спецтехники  
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="footer-menu">
+                            <li class="footer-menu__item">
+                                <a href="./catalog.html" class="footer-menu__link">Каталог</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="#" class="footer-menu__link">Бренды</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="./leasing.html" class="footer-menu__link">Лизинг</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="./about.html" class="footer-menu__link">О компании</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="./contacts.html" class="footer-menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="footer-grid footer-grid--top">
+                            <div class="footer-grid__col">
+                                <ul class="footer-contacts">
+                                    <li class="footer-contacts__item">
+                                        <p>Отдел продаж</p>
+                                    </li>
+                                    <li class="footer-contacts__item">
+                                        <a href="tel:8 (835) 000-00-00">8 (835) 000-00-00</a>
+                                    </li>
+                                    <li class="footer-contacts__item">
+                                        <a href="tel:8 (835) 000-00-00">8 (835) 000-00-00</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-grid__col">
+                                <ul class="footer-contacts">
+                                    <li class="footer-contacts__item">
+                                        <p>Бесплатный звонок по России</p>
+                                    </li>
+                                    <li class="footer-contacts__item">
+                                        <a href="tel:8 (835) 000-00-00">8 (835) 000-00-00</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-grid footer-grid--bottom">
+                            <div class="footer-grid__col">
+                                <ul class="info-list">
+                                    <li class="info-list__item">
+                                        <p>Эл. почта:</p>
+                                    </li>
+                                    <li class="info-list__item">
+                                        <a href="mailto:protehnika@mail.ru">protehnika@mail.ru</a>
+                                    </li>
+                                </ul>
+                                <ul class="info-list">
+                                    <li class="info-list__item">
+                                        <p>Офис:</p>
+                                    </li>
+                                    <li class="info-list__item">
+                                        <p>г. Чебоксары, Московский пр-кт, зд. 52а, офис 204</p>
+                                    </li>
+                                </ul>
+                                <ul class="info-list">
+                                    <li class="info-list__item">
+                                        <p>База:</p>
+                                    </li>
+                                    <li class="info-list__item">
+                                        <p>г. Чебоксары, Марпосадское ш., 32, корп. 2</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-grid__col">
+                                <ul class="bottom-menu">
+                                    <li class="bottom-menu__item">
+                                        <p>Спецтехника:</p>
+                                    </li>
+                                    <li class="bottom-menu__item">
+                                        <a href="">Тракторная техника</a>
+                                    </li>
+                                    <li class="bottom-menu__item">
+                                        <a href="">Погрузчики</a>
+                                    </li>
+                                    <li class="bottom-menu__item">
+                                        <a href="">Дорожно-строительная техника</a>
+                                    </li>
+                                    <li class="bottom-menu__item">
+                                        <a href="">Коммунальная техника</a>
+                                    </li>
+                                </ul>
+                                <ul class="bottom-menu">
+                                    <li class="bottom-menu__item">
+                                        <p>Полезные ссылки:</p>
+                                    </li>
+                                    <li class="bottom-menu__item">
+                                        <a href="">Политика конфиденциальности</a>
+                                    </li>
+                                    <li class="bottom-menu__item">
+                                        <a href="">Пользовательское  соглашение</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="social-list">
+                            <li class="social-list__item">
+                                <a href="">
+                                    <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5613 26.9063H13.5558C11.305 26.9055 9.09342 26.3408 7.12915 25.2694L0 27.1395L1.90788 20.1707C0.731007 18.1312 0.111742 15.8177 0.112751 13.4475C0.115701 6.03259 6.14862 0 13.5612 0C17.1588 0.00155268 20.5354 1.40208 23.0744 3.94409C25.6134 6.48598 27.011 9.86476 27.0096 13.4581C27.0066 20.8713 20.9761 26.9032 13.5613 26.9063ZM7.46 22.8349L7.86817 23.0771C9.58434 24.0955 11.5516 24.6344 13.5573 24.6352H13.5619C19.7227 24.6352 24.737 19.6208 24.7394 13.4574C24.7406 10.4707 23.5791 7.66238 21.4687 5.54955C19.3583 3.43673 16.5518 2.2726 13.5663 2.27157C7.40069 2.27157 2.38634 7.28546 2.38389 13.4484C2.38303 15.5604 2.97398 17.6173 4.09289 19.397L4.35866 19.8199L3.22946 23.9446L7.46 22.8349ZM19.876 16.3538C20.1103 16.4671 20.2686 16.5436 20.3362 16.6564C20.4201 16.7965 20.4201 17.4693 20.1403 18.2543C19.8601 19.0392 18.5177 19.7556 17.872 19.852C17.2931 19.9386 16.5605 19.9747 15.7556 19.7189C15.2675 19.5641 14.6417 19.3573 13.84 19.0111C10.6898 17.6508 8.56088 14.5976 8.15852 14.0206C8.13034 13.9801 8.11062 13.9519 8.09963 13.9372L8.09691 13.9335C7.91908 13.6963 6.72754 12.1065 6.72754 10.4611C6.72754 8.91325 7.48786 8.10195 7.83783 7.72851C7.86181 7.70293 7.88386 7.6794 7.90361 7.65782C8.21161 7.32141 8.57568 7.2373 8.79968 7.2373C9.02367 7.2373 9.24793 7.23938 9.44371 7.24921C9.46787 7.25042 9.493 7.25027 9.51898 7.25012C9.7148 7.24897 9.95892 7.24754 10.1998 7.82603C10.2924 8.04866 10.428 8.3787 10.571 8.7268C10.8601 9.43075 11.1796 10.2085 11.2358 10.3211C11.3198 10.4893 11.3758 10.6854 11.2638 10.9098C11.247 10.9434 11.2314 10.9752 11.2166 11.0055C11.1325 11.1773 11.0706 11.3036 10.9278 11.4703C10.8716 11.5359 10.8136 11.6065 10.7556 11.6772C10.64 11.818 10.5244 11.9588 10.4237 12.0591C10.2555 12.2266 10.0804 12.4084 10.2764 12.7448C10.4724 13.0812 11.1468 14.1816 12.1458 15.0726C13.2196 16.0304 14.1529 16.4353 14.6259 16.6405C14.7183 16.6805 14.7931 16.713 14.848 16.7405C15.1839 16.9087 15.38 16.8806 15.576 16.6564C15.772 16.4321 16.416 15.6751 16.64 15.3388C16.864 15.0025 17.0881 15.0585 17.396 15.1706C17.7041 15.2829 19.3562 16.0957 19.6922 16.2639C19.7578 16.2967 19.8191 16.3263 19.876 16.3538Z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="">
+                                    <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.407794 10.6985C3.16998 9.13363 6.25331 7.82748 9.13423 6.51469C14.0905 4.36444 19.0665 2.25146 24.0927 0.284299C25.0706 -0.0508654 26.8277 -0.378597 27 1.11195C26.9056 3.2219 26.5175 5.31949 26.2513 7.41708C25.5757 12.0299 24.7947 16.6269 24.0332 21.2245C23.7708 22.756 21.9057 23.5487 20.7122 22.5686C17.8441 20.576 14.9539 18.6027 12.1224 16.5639C11.1949 15.5945 12.055 14.2024 12.8834 13.5101C15.2456 11.1156 17.7509 9.08124 19.9897 6.56299C20.5936 5.06305 18.8092 6.32715 18.2206 6.71451C14.9867 9.00673 11.8319 11.4389 8.42226 13.4535C6.68063 14.4395 4.65074 13.5969 2.9099 13.0466C1.34906 12.3819 -0.938209 11.7122 0.407636 10.6987L0.407794 10.6985Z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__right">
+                        <div class="tabs">
+                            <ul class="tabs__list">
+                                <li class="active-tab">Офис</li>
+                                <li>База</li>
+                            </ul>
+                            <ul class="tabs__wrapper">
+                                <li class="tabs__content active">
+                                    <div class="footer-map">
+                                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A78d810d06c58adea18d5799c503ffd71c14db3373240c69fabff1a9b67879f82&amp;source=constructor" frameborder="0"></iframe>
+                                    </div>
+                                </li>
+                                <li class="tabs__content">
+                                    <div class="footer-map">
+                                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adfcc3516cd0e54dd2d235cec7ed45ee2a6c9fd1d52cafbd5f0bc10cd88c26071&amp;source=constructor" frameborder="0"></iframe>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <span class="footer__bottom-text">ООО "Центр Тракторной Техники"</span>
+                    <a href="#top" class="footer__bottom-to-top">
+                        <div class="footer__bottom-to-top__btn">
+                            <img src="../assets/img/icons/i-toTop.svg" alt="" class="footer__bottom-to-top__icon">
+                        </div>
+                        <span class="footer__bottom-to-top__text">Наверх</span>
+                    </a>
+                    <span class="footer__bottom-text">ИНН: 2130204087</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/libs/jquery.min.js"></script>
+    <script src="../assets/libs/swiper-bundle.min.js"></script>
+    <script src="../assets/libs/simplebar.min.js"></script>
+    <script src="../assets/libs/jquery.fancybox.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/swiper.js"></script>
+</body>
+</html>

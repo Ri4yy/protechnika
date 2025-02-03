@@ -1,0 +1,23 @@
+.swiper-employees {
+    display: flex;
+    flex-direction: column;
+
+
+
+    &__wrapper {
+        margin-top: 66px;
+        max-width: 950px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 40px;
+            order: 2;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 36px;
+        }
+    }
+
+    &__slide {
+        height: auto !important;
+    }
+}

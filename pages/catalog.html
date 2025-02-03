@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Каталог</title>
 
     <link rel="stylesheet" href="../assets/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/libs/simplebar.css">
@@ -22,19 +22,19 @@
                     <nav class="menu">
                         <ul class="menu-nav">
                             <li class="menu-nav__item">
-                                <a href="./catalog.html" class="menu-nav__link menu-nav__link--active">Каталог</a>
+                                <a href="#" class="menu-nav__link menu-nav__link--active">Каталог</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">Бренды</a>
+                                <a href="./brands.html" class="menu-nav__link">Бренды</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">Лизинг</a>
+                                <a href="./leasing.html" class="menu-nav__link">Лизинг</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">О компании</a>
+                                <a href="./about.html" class="menu-nav__link">О компании</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">Контакты</a>
+                                <a href="./contacts.html" class="menu-nav__link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -228,16 +228,16 @@
                             </div>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">Бренды</a>
+                            <a href="./brands.html" class="header-mobile__menu-item__link">Бренды</a>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">Лизинг</a>
+                            <a href="./leasing.html" class="header-mobile__menu-item__link">Лизинг</a>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">О компании</a>
+                            <a href="./about.html" class="header-mobile__menu-item__link">О компании</a>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">Контакты</a>
+                            <a href="./contacts.html" class="header-mobile__menu-item__link">Контакты</a>
                         </li>
                     </ul>
 
@@ -294,7 +294,7 @@
         </section>
 
         <!-- Баннер -->
-        <section class="banner-section">
+        <section class="catalog-banner-section">
             <div class="banner banner--type-1">
                 <div class="banner__wrapper">
                     <div class="banner__head">
@@ -369,14 +369,11 @@
                 <div class="catalog">
                     <div class="catalog__side">
                         <div class="filter">
-                            <!-- <div class="filter__top">
-                                <div class="filter__header">
-                                    <p class="filter__title">Фильтр товаров</p>
-                                    <button class="filter__close">
-                                        <img src="../assets/img/icons/close-filter.svg" alt="">
-                                    </button>
-                                </div>
-                            </div> -->
+                            <div class="filter__top">
+                                <button class="filter__close">
+                                    <img src="../assets/img/icons/close-filter.svg" alt="">
+                                </button>
+                            </div>
                             <div class="filter__wrapper">
                                 <ul class="filter-category">
                                     <li class="filter-category__list open">
@@ -415,10 +412,114 @@
                                             </ul>
                                         </div>
                                     </li>
+                                    <li class="filter-category__list open">
+                                        <div class="filter-category__top">
+                                            <span>Тип</span>
+                                        </div>
+                                        <div class="filter-category__description">
+                                            <ul class="filter-properties">
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox custom-checkbox">
+                                                        <input type="checkbox" checked>
+                                                        <span>Колесные</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Ковшевые</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Дизельные</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Сочлененные</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Электрические</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <p class="filter-category__more">Показать ещё</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="filter-category__list open">
+                                        <div class="filter-category__top">
+                                            <span>Назначение</span>
+                                        </div>
+                                        <div class="filter-category__description">
+                                            <ul class="filter-properties">
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox custom-checkbox">
+                                                        <input type="checkbox" checked>
+                                                        <span>Для строительных работ</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Карьерные</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Дорожные</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Снегоуборочные</span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter-properties__list">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox">
+                                                        <span>Сельскохозяйственные</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <p class="filter-category__more">Показать ещё</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="filter-category__list">
+                                        <div class="filter-category__row">
+                                            <span>В лизинг</span>
+                                            <label class="toggle-checkbox">
+                                                <input type="checkbox">
+                                                <div class="toggle-checkbox__switch"></div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="filter-category__list">
+                                        <div class="filter-category__row">
+                                            <span>В лизинг</span>
+                                            <label class="toggle-checkbox">
+                                                <input type="checkbox">
+                                                <div class="toggle-checkbox__switch"></div>
+                                            </label>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
-                            <button class="filter__btn filter__btn--show">Показать товары</button>
-                            <button class="filter__btn filter__btn--clear">Сбросить всё</button>
+                            <div class="filter__group-btn">
+                                <button class="filter__btn filter__btn--show">Показать товары</button>
+                                <button class="filter__btn filter__btn--clear">Сбросить всё</button>
+                            </div>
                         </div>
                     </div>
                     <div class="catalog__wrapper">
@@ -461,28 +562,43 @@
                                 </ul>
                             </div>
                             <div class="filter-panel">
-                                <select name="" class="filter-panel__sort">
-                                    <option value="По популярности">По популярности</option>
-                                    <option value=""></option>
-                                </select>
-
-                                <div class="filter-panel__view">
-                                    <a href="" class="filter-panel__view-link">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 20C1.34315 20 0 18.6569 0 17V3C0 1.34315 1.34315 0 3 0H17C18.6569 0 20 1.34315 20 3V17C20 18.6569 18.6569 20 17 20H3ZM6 11H2V17C2 17.5523 2.44772 18 3 18H6V11ZM12 11H8V18H12V11ZM18 11H14V18H17C17.5523 18 18 17.5523 18 17V11ZM6 2H3C2.44772 2 2 2.44772 2 3V9H6V2ZM12 2H8V9H12V2ZM17 2H14V9H18V3C18 2.44772 17.5523 2 17 2Z" fill="#FF6F00" />
+                                <button class="filter-panel__btn">
+                                    <div class="filter-panel__btn-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22.125 7.875H1.875C1.57663 7.875 1.29048 7.75647 1.0795 7.5455C0.868526 7.33452 0.75 7.04837 0.75 6.75C0.75 6.45163 0.868526 6.16548 1.0795 5.9545C1.29048 5.74353 1.57663 5.625 1.875 5.625H22.125C22.4234 5.625 22.7095 5.74353 22.9205 5.9545C23.1315 6.16548 23.25 6.45163 23.25 6.75C23.25 7.04837 23.1315 7.33452 22.9205 7.5455C22.7095 7.75647 22.4234 7.875 22.125 7.875Z" />
+                                            <path d="M18.375 13.125H5.625C5.32663 13.125 5.04048 13.0065 4.8295 12.7955C4.61853 12.5845 4.5 12.2984 4.5 12C4.5 11.7016 4.61853 11.4155 4.8295 11.2045C5.04048 10.9935 5.32663 10.875 5.625 10.875H18.375C18.6734 10.875 18.9595 10.9935 19.1705 11.2045C19.3815 11.4155 19.5 11.7016 19.5 12C19.5 12.2984 19.3815 12.5845 19.1705 12.7955C18.9595 13.0065 18.6734 13.125 18.375 13.125Z" />
+                                            <path d="M13.875 18.375H10.125C9.82663 18.375 9.54048 18.2565 9.3295 18.0455C9.11853 17.8345 9 17.5484 9 17.25C9 16.9516 9.11853 16.6655 9.3295 16.4545C9.54048 16.2435 9.82663 16.125 10.125 16.125H13.875C14.1734 16.125 14.4595 16.2435 14.6705 16.4545C14.8815 16.6655 15 16.9516 15 17.25C15 17.5484 14.8815 17.8345 14.6705 18.0455C14.4595 18.2565 14.1734 18.375 13.875 18.375Z" />
                                         </svg>
-                                    </a>
-                                    <a href="" class="filter-panel__view-link">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 17C20 18.6569 18.6569 20 17 20L3 20C1.34315 20 0 18.6569 0 17L0 3C0 1.34315 1.34315 0 3 0L17 0C18.6569 0 20 1.34315 20 3L20 17ZM2 14L2 17C2 17.5523 2.44772 18 3 18L17 18C17.5523 18 18 17.5523 18 17V14L2 14ZM2 8L2 12L18 12V8L2 8ZM2 3L2 6L18 6L18 3C18 2.44772 17.5523 2 17 2L3 2C2.44772 2 2 2.44772 2 3Z" fill="#9A9A98" />
-                                        </svg>
-                                    </a>
+                                    </div>
+                                    <div class="filter-panel__btn-main">
+                                        <span class="filter-panel__btn-text">Фильтр</span>
+                                    </div>
+                                </button>
+                                <div class="filter-panel__right">
+                                    <select name="" class="filter-panel__sort">
+                                        <option value="По популярности">По популярности</option>
+                                        <option value="">По возрастанию цены</option>
+                                        <option value="">По убыванию цены</option>
+                                    </select>
+    
+                                    <div class="filter-panel__view">
+                                        <a href="" class="filter-panel__view-link filter-panel__view-link--active">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 20C1.34315 20 0 18.6569 0 17V3C0 1.34315 1.34315 0 3 0H17C18.6569 0 20 1.34315 20 3V17C20 18.6569 18.6569 20 17 20H3ZM6 11H2V17C2 17.5523 2.44772 18 3 18H6V11ZM12 11H8V18H12V11ZM18 11H14V18H17C17.5523 18 18 17.5523 18 17V11ZM6 2H3C2.44772 2 2 2.44772 2 3V9H6V2ZM12 2H8V9H12V2ZM17 2H14V9H18V3C18 2.44772 17.5523 2 17 2Z" />
+                                            </svg>
+                                        </a>
+                                        <a href="" class="filter-panel__view-link">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 17C20 18.6569 18.6569 20 17 20L3 20C1.34315 20 0 18.6569 0 17L0 3C0 1.34315 1.34315 0 3 0L17 0C18.6569 0 20 1.34315 20 3L20 17ZM2 14L2 17C2 17.5523 2.44772 18 3 18L17 18C17.5523 18 18 17.5523 18 17V14L2 14ZM2 8L2 12L18 12V8L2 8ZM2 3L2 6L18 6L18 3C18 2.44772 17.5523 2 17 2L3 2C2.44772 2 2 2.44772 2 3Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="catalog__inner">
                             <div class="catalog-list">
-                                <div class="catalog-list__wrapper catalog-list__wrapper--col">
+                                <!-- <div class="catalog-list__wrapper catalog-list__wrapper--col">
                                     <div class="catalog-list__item">
                                         <div class="products-card">
                                             <div class="products-card__top">
@@ -528,6 +644,100 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="catalog-list__item">
+                                        <div class="products-card">
+                                            <div class="products-card__top">
+                                                <img src="../assets/img/products/card-2.png" class="products-card__top-img" alt="">
+                                                <div class="properties-card">
+                                                    <ul class="properties-card__list">
+                                                        <li class="properties-card__item">
+                                                            <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                            <span class="properties-card__item-value">1 800 кг</span>
+                                                        </li>
+                                                        <li class="properties-card__item">
+                                                            <span class="properties-card__item-title">Высота выгрузки (по шарниру)</span>
+                                                            <span class="properties-card__item-value">3 200 мм</span>
+                                                        </li>
+                                                        <li class="properties-card__item">
+                                                            <span class="properties-card__item-title">Тип органов управления:</span>
+                                                            <span class="properties-card__item-value">Джойстик</span>
+                                                        </li>
+                                                        <li class="properties-card__item">
+                                                            <span class="properties-card__item-title">Стандартный объем ковша:</span>
+                                                            <span class="properties-card__item-value">0,9 мᶟ</span>
+                                                        </li>
+                                                        <li class="properties-card__item">
+                                                            <span class="properties-card__item-title">Номинальная грузоподъемность</span>
+                                                            <span class="properties-card__item-value">1 800 кг</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="products-card__info">
+                                                <a href="./detail-card.html" class="products-card__info-title">LGCE LG918</a>
+                                                <p class="products-card__info-desc">Погрузчик фронтальный одноковшовый</p>
+                                                <div class="products-card__info-price-block">
+                                                    <p class="products-card__info-price-block__price">2 770 000 ₽</p>
+                                                    <button class="products-card__info-price-block__btn">Заказать</button>
+                                                    <button class="fast-view-btn" title="Быстрый просмотр">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
+                                                            <path d="M13.9998 24.5232C9.6131 24.5232 5.47143 21.9566 2.62477 17.4999C1.3881 15.5749 1.3881 12.4366 2.62477 10.4999C5.4831 6.04323 9.62477 3.47656 13.9998 3.47656C18.3748 3.47656 22.5164 6.04323 25.3631 10.4999C26.5998 12.4249 26.5998 15.5632 25.3631 17.4999C22.5164 21.9566 18.3748 24.5232 13.9998 24.5232ZM13.9998 5.22656C10.2314 5.22656 6.62643 7.4899 4.10643 11.4449C3.23143 12.8099 3.23143 15.1899 4.10643 16.5549C6.62643 20.5099 10.2314 22.7732 13.9998 22.7732C17.7681 22.7732 21.3731 20.5099 23.8931 16.5549C24.7681 15.1899 24.7681 12.8099 23.8931 11.4449C21.3731 7.4899 17.7681 5.22656 13.9998 5.22656Z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="catalog-list__wrapper catalog-list__wrapper--row">
+                                    <div class="catalog-list__item">
+                                        <div class="wide-card">
+                                            <div class="wide-card__wrapper">
+                                                <div class="wide-card__left">
+                                                    <img src="../assets/img/catalog/main/card-wide-1.png" class="wide-card__left-img" alt="">
+                                                    <div class="wide-card__left-btn">
+                                                        <button class="wide-card__price-block-btn">Заказать</button>
+                                                    </div>
+                                                </div>
+                                                <div class="wide-card__info">
+                                                    <a href="./detail-card.html" class="wide-card__info-title">Погрузчик фронтальный одноковшовый <span>LGCE LG918</span></a>
+                                                    <div class="wide-card__price-block">
+                                                        <p class="wide-card__price-block-price">2 770 000 ₽</p>
+                                                        <button class="wide-card__price-block-btn">Заказать</button>
+                                                    </div>
+                                                    <ul class="properties-wide-card">
+                                                        <li class="properties-wide-card__item">
+                                                            <span class="properties-wide-card__item-title">Номинальная грузоподъемность:</span>
+                                                            <span class="properties-wide-card__item-value">1 800 кг</span>
+                                                        </li>
+                                                        <li class="properties-wide-card__item">
+                                                            <span class="properties-wide-card__item-title">Высота выгрузки (по шарниру)</span>
+                                                            <span class="properties-wide-card__item-value">3 200 мм</span>
+                                                        </li>
+                                                        <li class="properties-wide-card__item">
+                                                            <span class="properties-wide-card__item-title">Тип органов управления:</span>
+                                                            <span class="properties-wide-card__item-value">Джойстик</span>
+                                                        </li>
+                                                        <li class="properties-wide-card__item">
+                                                            <span class="properties-wide-card__item-title">Стандартный объем ковша:</span>
+                                                            <span class="properties-wide-card__item-value">0,9 мᶟ</span>
+                                                        </li>
+                                                        <li class="properties-wide-card__item">
+                                                            <span class="properties-wide-card__item-title">Давление в системе:</span>
+                                                            <span class="properties-wide-card__item-value">17,5 МПа</span>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="wide-card__info-fast-view-btn" title="Быстрый просмотр">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
+                                                            <path d="M13.9998 24.5232C9.6131 24.5232 5.47143 21.9566 2.62477 17.4999C1.3881 15.5749 1.3881 12.4366 2.62477 10.4999C5.4831 6.04323 9.62477 3.47656 13.9998 3.47656C18.3748 3.47656 22.5164 6.04323 25.3631 10.4999C26.5998 12.4249 26.5998 15.5632 25.3631 17.4999C22.5164 21.9566 18.3748 24.5232 13.9998 24.5232ZM13.9998 5.22656C10.2314 5.22656 6.62643 7.4899 4.10643 11.4449C3.23143 12.8099 3.23143 15.1899 4.10643 16.5549C6.62643 20.5099 10.2314 22.7732 13.9998 22.7732C17.7681 22.7732 21.3731 20.5099 23.8931 16.5549C24.7681 15.1899 24.7681 12.8099 23.8931 11.4449C21.3731 7.4899 17.7681 5.22656 13.9998 5.22656Z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="catalog__bottom">
@@ -564,6 +774,106 @@
                 </div>
             </div>
         </section>
+
+        <!-- Форма консультация -->
+        <section class="consult-section">
+            <div class="container">
+                <div class="consult">
+                    <div class="consult__top">
+                        <h2 class="consult__top-title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h2>
+                        <p class="consult__top-text">Заполните форму и наш<br> специалист свяжется с вами</p>
+                    </div>
+                    <div class="consult__wrapper">
+                        <div class="consult__left">
+                            <img src="../assets/img/photo/consult.png" alt="" class="consult__left-img">
+                            <form action="" class="form consult-form">
+                                <div class="consult-form__wrapper">
+                                    <input type="text" class="input consult-form__input" name="name" placeholder="Ваше имя">
+                                    <input type="tel" class="input consult-form__input" name="phone" placeholder="Номер телефона">
+                                </div>
+                                <div class="consult-form__bottom">
+                                    <button class="consult-form__btn">
+                                        <div class="consult-form__btn-icon">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5163 10.8174C14.5189 11.3536 14.0863 11.7862 13.5501 11.7836C13.0139 11.781 12.5771 11.3443 12.5746 10.8081L12.5398 3.54093L1.89131 14.1894C1.51398 14.5668 0.89926 14.5638 0.5183 14.1829C0.137341 13.8019 0.134401 13.1872 0.511731 12.8098L11.1602 2.16136L3.89305 2.12658C3.35686 2.12402 2.92011 1.68727 2.91754 1.15108C2.91498 0.614884 3.34757 0.182294 3.88376 0.18486L13.4948 0.230847C14.031 0.233412 14.4677 0.67016 14.4703 1.20635L14.5163 10.8174Z" />
+                                            </svg>
+                                        </div>
+                                        <span class="consult-form__btn-text">Отправить</span>
+                                    </button>
+                                    <span class="consult-form__confirm">
+                                        Нажимая на кнопку “Отправить”, вы соглашаетесь на обработку персональных данных
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="consult__img">
+                            <img src="../assets/img/photo/consult.png" alt="" class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Смотреть также -->
+        <section class="also-see-section">
+            <div class="container">
+                <div class="swiper swiper-products">
+                    <div class="swiper-products__top">
+                        <p class="swiper-products__top-title">СМОТРЕТЬ ТАКЖЕ</p>
+                        <div class="swiper-products__top-right">
+                            <div class="swiper-counter"></div>
+
+                            <div class="swiper-groups">
+                                <div class="swiper-groups__btn swiper-groups-prev">
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.62216 14.1727C6.96519 14.519 7.52135 14.519 7.86438 14.1727C8.20741 13.8264 8.20741 13.2649 7.86438 12.9185L3.21522 8.22467L16.9054 8.22468C17.3905 8.22468 17.7838 7.82763 17.7838 7.33785C17.7838 6.84807 17.3905 6.45103 16.9054 6.45103L3.21522 6.45103L7.86438 1.75716C8.20741 1.41083 8.20741 0.849327 7.86438 0.503001C7.52135 0.156674 6.96519 0.156674 6.62216 0.503001L0.473516 6.71077C0.130489 7.0571 0.130489 7.6186 0.473516 7.96493L6.62216 14.1727Z" />
+                                    </svg>
+                                </div>
+                                <div class="swiper-groups__btn swiper-groups-next">
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.3778 14.1727C11.0348 14.519 10.4786 14.519 10.1356 14.1727C9.79259 13.8264 9.79259 13.2649 10.1356 12.9185L14.7848 8.22467L1.09456 8.22468C0.60945 8.22468 0.216187 7.82763 0.216187 7.33785C0.216187 6.84807 0.60945 6.45103 1.09456 6.45103L14.7848 6.45103L10.1356 1.75716C9.79259 1.41083 9.79259 0.849327 10.1356 0.503001C10.4786 0.156674 11.0348 0.156674 11.3778 0.503001L17.5265 6.71077C17.8695 7.0571 17.8695 7.6186 17.5265 7.96493L11.3778 14.1727Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper swiper-products__wrapper">
+                        <div class="swiper-slide swiper-products__slide">
+                            <a href="#" class="section-card">
+                                <div class="section-card__top">
+                                    <img src="../assets/img/catalog/section/s-1.png" alt="">
+                                </div>
+                                <p class="section-card__title">Колесные тракторы</p>  
+                            </a>
+                        </div>
+                        <div class="swiper-slide swiper-products__slide">
+                            <a href="#" class="section-card">
+                                <div class="section-card__top">
+                                    <img src="../assets/img/catalog/section/s-2.png" alt="">
+                                </div>
+                                <p class="section-card__title">Фронтальные погрузчики</p>  
+                            </a>
+                        </div>
+                        <div class="swiper-slide swiper-products__slide">
+                            <a href="#" class="section-card">
+                                <div class="section-card__top">
+                                    <img src="../assets/img/catalog/section/s-3.png" alt="">
+                                </div>
+                                <p class="section-card__title">Экскаваторы</p>  
+                            </a>
+                        </div>
+                        <div class="swiper-slide swiper-products__slide">
+                            <a href="#" class="section-card">
+                                <div class="section-card__top">
+                                    <img src="../assets/img/catalog/section/s-4.png" alt="">
+                                </div>
+                                <p class="section-card__title">Коммунальная техника</p>  
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -586,16 +896,16 @@
                                 <a href="#" class="footer-menu__link">Каталог</a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="" class="footer-menu__link">Бренды</a>
+                                <a href="./brands.html" class="footer-menu__link">Бренды</a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="" class="footer-menu__link">Лизинг</a>
+                                <a href="./leasing.html" class="footer-menu__link">Лизинг</a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="" class="footer-menu__link">О компании</a>
+                                <a href="./about.html" class="footer-menu__link">О компании</a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="" class="footer-menu__link">Контакты</a>
+                                <a href="./contacts.html" class="footer-menu__link">Контакты</a>
                             </li>
                         </ul>
                         <div class="footer-grid footer-grid--top">

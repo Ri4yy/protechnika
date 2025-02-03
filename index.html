@@ -25,16 +25,16 @@
                                 <a href="./pages/catalog.html" class="menu-nav__link">Каталог</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">Бренды</a>
+                                <a href="./pages/brands.html" class="menu-nav__link">Бренды</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">Лизинг</a>
+                                <a href="./pages/leasing.html" class="menu-nav__link">Лизинг</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">О компании</a>
+                                <a href="./pages/about.html" class="menu-nav__link">О компании</a>
                             </li>
                             <li class="menu-nav__item">
-                                <a href="" class="menu-nav__link">Контакты</a>
+                                <a href="./pages/contacts.html" class="menu-nav__link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -228,16 +228,16 @@
                             </div>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">Бренды</a>
+                            <a href="./pages/brands.html" class="header-mobile__menu-item__link">Бренды</a>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">Лизинг</a>
+                            <a href="./pages/leasing.html" class="header-mobile__menu-item__link">Лизинг</a>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">О компании</a>
+                            <a href="./pages/about.html" class="header-mobile__menu-item__link">О компании</a>
                         </li>
                         <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-item__link">Контакты</a>
+                            <a href="./pages/contacts.html" class="header-mobile__menu-item__link">Контакты</a>
                         </li>
                     </ul>
 
@@ -516,7 +516,7 @@
         </section>
 
         <!-- Преимущества -->
-        <section class="advantages-section">
+        <section class="advantages-section advantages-section--type-1">
             <div class="container">
                 <div class="advantages">
                     <div class="advantages__wrapper">
@@ -915,7 +915,7 @@
         <!-- Лизинг -->
         <section class="leasing-section">
             <div class="container">
-                <div class="leasing">
+                <div class="leasing leasing--type-1">
                     <div class="leasing__top">
                         <h2 class="leasing__top-title">
                             СПЕЦТЕХНИКА<br>
@@ -958,7 +958,7 @@
         </section>
 
         <!-- О нас -->
-        <section class="about-section">
+        <section class="about-section about-section--type-1">
             <div class="about">
                 <div class="container">
                     <div class="about__top">
@@ -1051,7 +1051,7 @@
                                     <p class="products-card__info-desc">Погрузчик фронтальный одноковшовый</p>
                                     <div class="products-card__info-price-block">
                                         <p class="products-card__info-price-block__price">2 770 000 ₽</p>
-                                        <button class="products-card__info-price-block__btn">Заказать</button>
+                                        <button class="products-card__info-price-block__btn form-modal-open">Заказать</button>
                                         <button class="fast-view-btn" title="Быстрый просмотр">
                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.9999 19.0516C11.2116 19.0516 8.94824 16.7882 8.94824 13.9999C8.94824 11.2116 11.2116 8.94824 13.9999 8.94824C16.7882 8.94824 19.0516 11.2116 19.0516 13.9999C19.0516 16.7882 16.7882 19.0516 13.9999 19.0516ZM13.9999 10.6982C12.1799 10.6982 10.6982 12.1799 10.6982 13.9999C10.6982 15.8199 12.1799 17.3016 13.9999 17.3016C15.8199 17.3016 17.3016 15.8199 17.3016 13.9999C17.3016 12.1799 15.8199 10.6982 13.9999 10.6982Z" />
@@ -1418,7 +1418,7 @@
     <div class="modal fast-fiew-modal">
         <div class="modal__body fast-fiew-modal__body">
             <div class="modal__wrapper fast-fiew-modal__wrapper">
-                <button class="close-modal">
+                <button class="close-modal fast-fiew-modal__close">
                     <img src="../assets/img/icons/close.svg" alt="">
                 </button>
                 <div class="modal__info">
@@ -1503,6 +1503,42 @@
                                 <path d="M16.5192 20.6156C16.0116 21.1281 15.1884 21.1281 14.6808 20.6156C14.1731 20.103 14.1731 19.272 14.6808 18.7594L21.5615 11.8125L1.3 11.8125C0.582031 11.8125 0 11.2249 0 10.5C0 9.77513 0.58203 9.1875 1.3 9.1875L21.5615 9.1875L14.6808 2.24058C14.1731 1.72802 14.1731 0.896986 14.6808 0.384423C15.1884 -0.128141 16.0116 -0.128141 16.5192 0.384423L25.6192 9.57192C26.1269 10.0845 26.1269 10.9155 25.6192 11.4281L16.5192 20.6156Z" />
                             </svg>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal form-modal">
+        <div class="modal__body form-modal__body">
+            <div class="modal__wrapper form-modal__wrapper">
+                <button class="close-modal form-modal__close">
+                    <img src="../assets/img/icons/close.svg" alt="">
+                </button>
+                <div class="modal__info">
+                    <div class="modal-form-block">
+                        <div class="modal-form-block__wrapper">
+                            <p class="modal-form-block__title">Заполните форму и наш специалист свяжется с вами</p>
+                            <form action="" class="form consult-form">
+                                <div class="consult-form__wrapper">
+                                    <input type="text" class="input consult-form__input" name="name" placeholder="Ваше имя">
+                                    <input type="tel" class="input consult-form__input" name="phone" placeholder="Номер телефона">
+                                </div>
+                                <div class="consult-form__bottom">
+                                    <button class="consult-form__btn">
+                                        <div class="consult-form__btn-icon">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5163 10.8174C14.5189 11.3536 14.0863 11.7862 13.5501 11.7836C13.0139 11.781 12.5771 11.3443 12.5746 10.8081L12.5398 3.54093L1.89131 14.1894C1.51398 14.5668 0.89926 14.5638 0.5183 14.1829C0.137341 13.8019 0.134401 13.1872 0.511731 12.8098L11.1602 2.16136L3.89305 2.12658C3.35686 2.12402 2.92011 1.68727 2.91754 1.15108C2.91498 0.614884 3.34757 0.182294 3.88376 0.18486L13.4948 0.230847C14.031 0.233412 14.4677 0.67016 14.4703 1.20635L14.5163 10.8174Z" />
+                                            </svg>
+                                        </div>
+                                        <span class="consult-form__btn-text">Отправить</span>
+                                    </button>
+                                    <span class="consult-form__confirm">
+                                        Нажимая на кнопку “Отправить”, вы соглашаетесь на обработку персональных данных
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

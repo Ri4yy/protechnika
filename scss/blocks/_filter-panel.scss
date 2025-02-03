@@ -1,0 +1,119 @@
+.filter-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__btn {
+        display: none;
+        height: 36px;
+        background: #f0f0ef;
+
+        @media(max-width: $breakpoint992) {
+            display: flex;
+        }
+        @media(max-width: $breakpoint768) {
+            height: 32px;
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: inherit;
+            width: 36px;
+            border: 2px solid #dadada;
+
+            @media(max-width: $breakpoint768) {
+                width: 32px;
+            }
+        }
+        &-main {
+            display: flex;
+            align-items: center;
+
+            padding: 0 16px;
+            height: inherit;
+            border: 2px solid #dadada;
+            border-left: 0;
+
+            @media(max-width: $breakpoint768) {
+                display: none;
+            }
+        }
+
+        & svg {
+            fill: #9A9A98;
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: $black;
+        }
+    }
+
+    &__right {
+        margin-left: auto;
+
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__sort {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: $black;
+
+        width: 250px;
+        height: 36px;
+        border: 2px solid #dadada;
+        background: #f0f0ef;
+        padding-left: 14px;
+
+        appearance: none;
+        background-image: url(../assets/img/icons/select-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 98% center;
+
+        @media(max-width: $breakpoint768) {
+            height: 32px;
+            width: 190px;
+
+            font-size: 14px;
+            background-position: 97% center;
+            background-size: 8%;
+        }
+    }
+
+    &__view {
+        display: flex;
+
+        @media(max-width: $breakpoint768) {
+            display: none;
+        }
+
+        &-link {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #dadada;
+            background: #f0f0ef;
+
+            & svg {
+                fill: #9A9A98;
+            }
+
+            &--active {
+                & svg {
+                    fill: $main-color;
+                }
+            }
+        }
+    }
+}

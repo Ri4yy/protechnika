@@ -1,0 +1,39 @@
+.leasing-banner-img {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-image: url(../assets/img/bg/about-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 156px;
+        width: 100%;
+
+        @media(max-width: $breakpoint768) { 
+            top: 14px;
+            transform: translateY(0%);
+            height: 132px;
+        }
+        @media(max-width: $breakpoint480) {
+            top: -6px;
+            height: 80px;
+        }
+    }
+
+    @media(max-width: $breakpoint768) { 
+        margin-top: 36px;
+    }
+    @media(max-width: $breakpoint480) { 
+        margin-top: 0;
+    }
+
+    & img {
+        position: relative;
+        z-index: 1;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,83 @@
+.contacts {
+
+    &__title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $black;
+
+        @media(max-width: $breakpoint992) {
+            font-size: 44px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 40px;
+        }
+    }
+
+    &__wrapper {
+        margin: 50px auto 0;
+        max-width: 850px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+        gap: 58px;
+
+        @media(max-width: $breakpoint992) {
+            gap: 12px;
+        }
+        @media(max-width: $breakpoint480) {
+            grid-template-columns: none;
+        }
+    }
+
+    &__item {
+        border: 1px solid #d1d1d0;
+        border-radius: 20px;
+        background: #f0f0ef;
+
+        padding: 35px 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media(max-width: $breakpoint992) {
+            padding: 35px 30px;
+        }
+        @media(max-width: $breakpoint480) {
+            padding: 35px 12px;
+        }
+
+        &-icon {
+            max-height: 44px;
+
+            & svg {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+        &-text {
+            margin-top: 22px;
+
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            text-align: center;
+            color: $text-color;
+        }
+        &-link {
+            margin-top: 6px;
+
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 130%;
+            color: $black;
+
+            @media(max-width: $breakpoint480) {
+                font-size: 22px;
+            }
+        }
+    }
+}

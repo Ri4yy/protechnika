@@ -1,12 +1,33 @@
 .tabs {
-    margin-top: 100px;
 
-    @media(max-width: $breakpoint1024) {
-        margin: 0 auto 0;
+    &--footer {
+        margin-top: 100px;
 
-        max-width: 570px;
-        width: 100%;
+        @media(max-width: $breakpoint1024) {
+            margin: 0 auto 0;
+
+            max-width: 570px;
+            width: 100%;
+        }
+
+        & .tabs__wrapper {
+            margin-top: 32px;
+
+            @media(max-width: $breakpoint660) {
+                margin-top: 20px;
+            }
+        }
     }
+    &--contacts {
+        & .tabs__wrapper {
+            margin-top: 52px;
+
+            @media(max-width: $breakpoint480) {
+                margin-top: 40px;
+            }
+        }
+    }
+
 
     &__list {
         display: flex;
@@ -33,13 +54,6 @@
         }
     }
 
-    &__wrapper {
-        margin-top: 32px;
-
-        @media(max-width: $breakpoint660) {
-            margin-top: 20px;
-        }
-    }
     &__content {
         display: none;
 

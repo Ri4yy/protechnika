@@ -27,6 +27,10 @@
         width: 5px;
         background: #DADADA;
         border-radius: 5px;
+
+        @media(max-width: $breakpoint768) {
+            right: -7px;
+        }
     }
     &__menu {
         margin-top: 30px;

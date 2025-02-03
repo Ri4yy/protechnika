@@ -1,6 +1,10 @@
 .catalog {
     display: flex;
-    gap: 45px;
+    gap: 38px;
+
+    @media(max-width: $breakpoint1248) {
+        gap: 32px;
+    }
 
     &__side {
         max-width: 300px;
@@ -12,7 +16,7 @@
         @media(max-width: $breakpoint1024) {
             max-width: 300px;
         }
-        @media(max-width: $breakpoint768) {
+        @media(max-width: $breakpoint992) {
             display: none;
             position: fixed;
             top: 0;
@@ -22,6 +26,7 @@
         }
         &.open {
             display: block;
+            z-index: 9;
         }
     }
     &__wrapper {
@@ -32,11 +37,6 @@
         flex-direction: column;
         gap: 36px; 
     }
-    // &__header {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: space-between;
-    // }
     &__menu {
         display: none;
         justify-content: center;
@@ -51,13 +51,25 @@
         @media(max-width: $breakpoint768) {
             display: flex;
         }
-    }
+    } 
     &__inner {
         margin-top: 30px;
         display: flex;
         flex-direction: column;
+
+        @media(max-width: $breakpoint768) {
+            max-width: 600px;
+            margin: 36px auto 0 auto;
+        }
+        @media(max-width: $breakpoint660) {
+            max-width: 275px;
+        } 
     }
     &__bottom {
         margin-top: 60px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 36px;
+        }
     }
 }

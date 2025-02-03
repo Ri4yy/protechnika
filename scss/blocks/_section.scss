@@ -5,14 +5,23 @@
         padding-bottom: 48px;
     }
 }
+.catalog-banner-section {
+    padding-bottom: 56px;
+    
+    @media(max-width: $breakpoint768) {
+        padding-bottom: 28px;
+    }
+}
 
 .advantages-section {
     padding: 54px 0;
 
-    background: url(../assets/img/bg/adv-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    &--type-1 {
+        background: url(../assets/img/bg/adv-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
     @media(max-width: $breakpoint992) {
         padding: 24px 0;
@@ -35,7 +44,19 @@
 }
 
 .about-section {
-    margin-top: 48px;
+    &--type-1 {
+        margin-top: 48px;
+    }
+    &--type-2 {
+        margin-bottom: 50px;
+
+        @media(max-width: $breakpoint768) {
+            margin-bottom: 34px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-bottom: 26px;
+        }
+    }
 }
 
 .consult-section {
@@ -146,4 +167,82 @@
     @media(max-width: $breakpoint480) { 
         padding: 16px 0;
     }
+}
+
+.catalog-section {
+    padding-bottom: 48px;
+}
+
+.also-see-section {
+    padding: 52px 0;
+}
+
+.leasing-adv-section {
+    padding-top: 84px;
+
+    @media(max-width: $breakpoint768) { 
+        padding-top: 44px;
+    }
+    @media(max-width: $breakpoint480) { 
+        padding-top: 36px;
+    }
+}
+
+.leasing-banks-section {
+    margin-top: 40px;
+
+    & .leasing-banks__wrapper {
+        justify-content: center;
+    }
+}
+
+.leasing-programs-section {
+    padding: 40px 0;
+
+    @media(max-width: $breakpoint480) { 
+        padding: 24px 0;
+    }
+}
+
+.leasing-steps-section {
+    padding: 40px 0 60px;
+
+    @media(max-width: $breakpoint992) {
+        padding: 34px 0;
+    }
+    @media(max-width: $breakpoint480) {
+        padding: 26px 0 42px;
+    }
+}
+
+.about-info-section {
+    padding: 40px 0;
+
+    @media(max-width: $breakpoint768) {
+        padding: 48px 0;
+    }
+}
+
+.brands-section {
+    padding: 40px 0;
+
+    @media(max-width: $breakpoint768) {
+        padding: 30px 0;
+    }
+}
+
+.brands-info-section {
+    padding: 48px 0;
+
+    @media(max-width: $breakpoint768) {
+        padding: 30px 0;
+    }
+}
+
+.contacts-section {
+    padding: 40px 0;
+}
+
+.employees-section {
+    padding: 40px 0;
 }

@@ -18,17 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.remove('active')
             btnMenu.classList.remove('btn-menu--open')
         } else if(width <= 992) {
-            catalogToggle.classList.remove('active')
+            if(catalogToggle) {
+                catalogToggle.classList.remove('active')
+            }
             catalogMenu.classList.remove('active')
         } else {
             return
         }
     }
 
-    window.addEventListener('resize', resize)
-    resize()
-
-    
     // Mobile menu
     let menuToggle = document.querySelector('.header-mobile__menu-item__toggle')
 
@@ -67,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 
+    window.addEventListener('resize', resize)
+    resize()
 
     function tabs(wrapperMain, wrapperTab, wrapperContent, activeTab, activeContent) {
         $(wrapperTab).on('click', 'li:not('+activeTab+')', function () {
@@ -178,6 +178,112 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     showModal($('.fast-view-btn'), $('.fast-fiew-modal'));
+    showModal($('.form-modal-open'), $('.form-modal'));
+
+    // Фильтр в каталоге
+    let filter = document.querySelector('.catalog__side'),
+    filterOpen = document.querySelector('.filter-panel__btn'),
+    filterClose = document.querySelector('.filter__close');
+    
+    if(filter) {
+        filterOpen.addEventListener('click', (e) => {
+            filter.classList.add('open')
+            html.classList.add('no-scroll')
+        })
+
+        filterClose.addEventListener('click', (e) => {
+            filter.classList.remove('open')
+            html.classList.remove('no-scroll')
+        })
+    }
+
+    // Скрытие свойств фильтре, если их больше 4
+    const categories = document.querySelectorAll('.filter-category__list');
+
+    categories.forEach(category => {
+        const items = category.querySelectorAll('.filter-properties__list');
+        const showMoreButtonContainer = category.querySelector('.filter-category__more');
+        const maxVisibleItems = 4;
+        let isShowingAll = false;
+
+        function updateVisibility() {
+            let hiddenCount = 0;
+
+            items.forEach((item, index) => {
+                if (index < maxVisibleItems) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                    hiddenCount++;
+                }
+            });
+
+            if (showMoreButtonContainer) {
+                if (hiddenCount > 0) {
+                    showMoreButtonContainer.style.display = 'block';
+                    showMoreButtonContainer.innerHTML = `Показать больше (<span>${hiddenCount}</span>)`;
+                } else {
+                    showMoreButtonContainer.style.display = 'none';
+                }
+            }
+        }
+
+        function showAllItems() {
+            items.forEach(item => {
+                item.style.display = 'block';
+            });
+
+            if (showMoreButtonContainer) {
+                showMoreButtonContainer.textContent = 'Скрыть';
+            }
+        }
+
+        if (showMoreButtonContainer) {
+            showMoreButtonContainer.addEventListener('click', function () {
+                isShowingAll = !isShowingAll;
+
+                if (isShowingAll) {
+                    showAllItems();
+                } else {
+                    updateVisibility();
+                }
+            });
+        } 
+
+        updateVisibility();
+    });
+
+    // Показать больше "Бренды"
+    let brands = document.querySelectorAll('.brands__item'),
+        brandsBtn = document.querySelector('.brands__more');
+
+    const showItem = 4;
+    let btnStatus = true;
+
+
+    function updateVisibilityBrands() {
+        brands.forEach((item, index) => {
+            if (index < showItem) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    brandsBtn.addEventListener('click', () => {
+        if(btnStatus) {
+            brands.forEach(item => {
+                item.style.display = 'block';
+            });
+            brandsBtn.textContent = 'Развернуть';
+            btnStatus = false;
+        } else {
+            updateVisibilityBrands()
+            brandsBtn.textContent = 'Скрыть';
+            btnStatus = true;
+        }
+    })
 
     // Fancybox
     function fancybox(container) {
@@ -240,5 +346,4 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.video__iframe').css('display', 'block');
         $('.video__iframe iframe').prop('src', 'https://rutube.ru/play/embed/7b5dd092b11ab240ae91c036845a774e/');
     });
-    
 })

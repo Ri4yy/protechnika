@@ -1,0 +1,111 @@
+.brands {
+
+    &__title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #323232;
+    }
+    &__wrapper {
+        margin-top: 32px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        row-gap: 42px;
+        column-gap: 32px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 26px;
+            gap: 12px;
+        }
+        @media(max-width: $breakpoint660) {
+            grid-template-columns: none;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 20px;
+            gap: 32px;
+        }
+    }
+    &__item {
+        border: 1px solid #d1d1d0;
+        background: #f0f0ef;
+        padding: 22px 28px;
+
+        min-height: 314px;
+
+        @media(max-width: $breakpoint768) {
+            padding: 22px 10px;
+            display: none;
+        }
+        @media(max-width: $breakpoint660) {
+            padding: 22px 16px;
+        }
+
+        &:nth-child(-n+4) {
+            @media(max-width: $breakpoint768) {
+                display: block;
+            }
+        }
+
+        &-icon {
+            max-height: 46px;
+
+            & img {
+                object-fit: contain;
+            }
+        }
+
+        &-list {
+            margin-top: 28px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            &__item {
+                display: flex;
+            }
+            &__link {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 130%;
+                color: $text-color;
+
+                padding: 4px 12px;
+                border: 1px solid #9a9a98;
+                border-radius: 12px;
+                transition: all .3s;
+
+                @media(max-width: $breakpoint375) {
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    border-color: $main-color;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    &__more {
+        margin: 18px auto 0;
+
+        display: none;
+        align-items: center;
+        gap: 6px;
+
+        font-weight: 500;
+        font-size: 20px;
+        color: $text-color;
+
+        @media(max-width: $breakpoint768) {
+            display: flex;
+        }
+
+        &::after {
+            content: url(../assets/img/icons/select-arrow.svg);
+        }
+    }
+}

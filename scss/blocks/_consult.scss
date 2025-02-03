@@ -13,7 +13,7 @@
             font-size: 48px;
             line-height: 130%;
             color: $black; 
-            text-transform: uppercase;
+            text-transform: uppercase;    text-wrap-style: pretty;
 
             @media(max-width: $breakpoint992) {
                 font-size: 44px;

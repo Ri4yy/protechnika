@@ -4,6 +4,7 @@
     padding: 8px 10px 28px 8px;
 
     overflow: hidden;
+    height: 100%;
 
     @media(max-width: $breakpoint480) {
         max-width: 275px;

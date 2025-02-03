@@ -1,8 +1,14 @@
 .leasing {
-    padding: 38px 0 48px;
 
     @media(max-width: $breakpoint480) {
         padding: 28px 0;
+    }
+
+    &--type-1 {
+        padding: 38px 0 48px;
+    }
+    &--type-2 {
+        padding-top: 10px;
     }
     
     &__top {

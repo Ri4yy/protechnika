@@ -1,0 +1,60 @@
+.employees {
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width: $breakpoint768) {
+            display: contents;
+        }
+
+        &-title {
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: $black;
+
+            @media(max-width: $breakpoint480) {
+                font-size: 36px;
+            }
+            @media(max-width: $breakpoint375) {
+                font-size: 32px;
+            }
+        }
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            @media(max-width: $breakpoint768) {
+                margin: 40px  auto 0;
+
+                max-width: 360px;
+                width: 100%;
+                justify-content: space-between;
+
+                order: 3;
+            }
+            @media(max-width: $breakpoint480) {
+                margin-top: 28px;
+            }
+        }
+    }
+
+    &__wrapper {
+        max-width: 950px;
+        width: 100%;
+        margin: 0 auto;
+
+        @media(max-width: $breakpoint768) {
+            max-width: 620px;
+        }
+        @media(max-width: 600px) {
+            max-width: 290px;
+        }
+    }
+}
