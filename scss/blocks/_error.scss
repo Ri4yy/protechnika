@@ -1,0 +1,157 @@
+.error {
+
+    &__title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 130%;
+        color: $black;
+
+        @media(max-width: $breakpoint992) {
+            font-size: 40px;
+        }
+        @media(max-width: $breakpoint768) {
+            font-size: 36px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 32px;
+        }
+
+        & span {
+            color: $main-color;
+        }
+    }
+    &__text {
+        margin-top: 30px;
+        max-width: 710px;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        color: $text-color;
+
+        @media(max-width: $breakpoint992) {
+            font-size: 18px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+    &__link {
+        margin-top: 30px;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        width: fit-content;
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 20px;
+            gap: 12px;
+        }
+
+        &:hover {
+
+            & .error__link-icon {
+                background: transparent;
+                border: 1px solid $main-color;
+
+                & svg {
+                    fill: $main-color;
+                    transform: translateX(3px);
+                }
+            }
+        }
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            background: $main-color;
+    
+            transition: all .3s;
+    
+            @media(max-width: $breakpoint480) {
+                width: 60px;
+                height: 60px;
+            }
+    
+            & svg {
+                fill: #fff;
+    
+                transition: all .3s;
+            }
+        }
+        &-text {
+            font-weight: 800;
+            font-size: 20px;
+            color: $black;
+    
+            @media(max-width: $breakpoint768) {
+                font-size: 18px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        margin-top: -110px;
+        // pointer-events: none;
+
+        @media(max-width: $breakpoint1140) {
+            margin-top: -90px;
+        }
+        @media(max-width: $breakpoint992) {
+            margin-top: 30px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            bottom: 60px;
+            content: "";
+            background-image: url(../assets/img/bg/error-line-bg.png);
+            background-position: center;
+            width: 100%;
+            height: 215px;
+            z-index: 1;
+
+            @media(max-width: $breakpoint1140) {
+                height: 140px;
+            }
+            @media(max-width: $breakpoint480) {
+                height: 80px;
+
+                bottom: auto;
+                top: 60%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: end;
+        }
+        & img {
+            position: relative;
+            z-index: 2;
+            object-fit: contain;
+
+            @media(max-width: $breakpoint1140) {
+                max-width: 600px;
+            }
+            @media(max-width: $breakpoint992) {
+                width: 100%;
+            }
+        }
+    }
+}
