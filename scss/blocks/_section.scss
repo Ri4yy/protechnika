@@ -156,6 +156,10 @@
 
 .gallery-section {
     padding: 42px 0;
+
+    @media(max-width: $breakpoint480) {
+        padding: 24px 0 32px;
+    }
 }
 
 .review-section {
@@ -178,13 +182,13 @@
 }
 
 .leasing-adv-section {
-    padding-top: 84px;
+    padding: 84px 0 70px;
 
     @media(max-width: $breakpoint768) { 
-        padding-top: 44px;
+        padding: 44px 0 36px;
     }
     @media(max-width: $breakpoint480) { 
-        padding-top: 36px;
+        padding: 36px 0 28px;
     }
 }
 
@@ -240,9 +244,13 @@
 }
 
 .contacts-section {
-    padding: 40px 0;
+    // padding: 40px 0;
 }
 
 .employees-section {
     padding: 40px 0;
+}
+
+.calculator-section {
+    padding-top: 25px;
 }

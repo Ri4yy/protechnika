@@ -168,35 +168,26 @@ document.addEventListener('DOMContentLoaded', () => {
             320: {
                 allowTouchMove: true,
                 slidesPerView: 1,
-                initialSlide: 0,
-            },
-            480: {
-                allowTouchMove: true,
-                slidesPerView: 2.5
-            },
-            768: {
-                allowTouchMove: true,
-                slidesPerView: 3
             },
             1024: {
                 allowTouchMove: true,
                 slidesPerView: 3
             },
-            1280: {
-                allowTouchMove: true,
-                slidesPerView: 3
-            },
-            1921: {
-                allowTouchMove: true,
-                slidesPerView: 4
-            },
         },
         
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-gallery__btn-next',
+            prevEl: '.swiper-gallery__btn-prev',
         },
+        pagination: {
+            el: '.swiper-gallery__pagination',
+          },
     });
+    const btnNextGallery = document.querySelector('.gallery-btn-next');
+    const btnPrevGallery = document.querySelector('.gallery-btn-prev');
+    
+    btnNextGallery.addEventListener('click', () => swiperGallery.slideNext());
+    btnPrevGallery.addEventListener('click', () => swiperGallery.slidePrev());
 
     const swiperReview = new Swiper('.swiper-review', {
         spaceBetween: 40,
@@ -237,8 +228,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    const btnNextOutside = document.querySelector('.btn-without-container-next');
-    const btnPrevOutside = document.querySelector('.btn-without-container-prev');
+    const btnNextOutside = document.querySelector('.review-btn-next');
+    const btnPrevOutside = document.querySelector('.review-btn-prev');
     
     btnNextOutside.addEventListener('click', () => swiperReview.slideNext());
     btnPrevOutside.addEventListener('click', () => swiperReview.slidePrev());

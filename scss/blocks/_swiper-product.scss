@@ -17,14 +17,20 @@
         }
     }
     &__pagination {
-        margin-top: 12px;
+        margin-top: 24px;
+
+        display: flex;
+        justify-content: center;
 
         position: relative;
         top: auto !important;
         bottom: 0 !important;
 
-        @media(max-width: $breakpoint480) {
-            margin-top: 0;
+        @media(max-width: $breakpoint1248) {
+            margin-top: 40px;
+        }
+        @media(max-width: $breakpoint768) {
+            margin-top: 14px;
         }
 
         & .swiper-pagination-bullet {

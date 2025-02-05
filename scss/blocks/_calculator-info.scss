@@ -1,0 +1,198 @@
+.calculator-info {
+
+    border-radius: 30px;
+    border: 1px solid $main-color;
+    padding: 44px 140px;
+
+    @media(max-width: $breakpoint1248) {
+        padding: 44px 80px;
+    }
+    @media(max-width: $breakpoint992) {
+        max-width: 384px;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media(max-width: $breakpoint992) {
+            flex-direction: column;
+            gap: 0px; 
+        }
+    }
+    &__left, &__right {
+        max-width: 384px;
+        width: 100%;
+
+        @media(max-width: $breakpoint992) {
+            display: contents;
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media(max-width: $breakpoint992) {
+            gap: 4px;
+        }
+    }
+    
+    &__bottom {
+        height: 115px;
+        margin-top: 36px;
+        border: 1px solid $main-color;
+        border-radius: 8px;
+        padding: 15px;
+
+        @media(max-width: $breakpoint992) {
+            margin-top: 12px;
+            order: 4;
+        }
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+
+            @media(max-width: $breakpoint375) {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            max-width: 150px;
+
+            @media(max-width: $breakpoint375) {
+                max-width: 100%;
+            }
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: #000;
+        }
+        &-price {
+            margin-block-start: auto;
+            font-weight: 700;
+            font-size: 16px;
+            color: $main-color;
+        }
+    }
+
+    &__graph {
+
+        &-title {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 130%;
+            color: $black;
+        }
+        &-wrapper {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            @media(max-width: $breakpoint992) {
+                margin-top: 12px;
+                gap: 22px;
+            }
+        }
+    }
+
+    &__result {
+        margin-top: 20px;
+
+        border: 1px solid #a3a3a1;
+        border-radius: 8px;
+        background: #f0f0ef;
+        padding: 22px 14px;
+
+        @media(max-width: $breakpoint992) {
+            margin-top: 16px;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media(max-width: $breakpoint375) {
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+        &-text {
+            max-width: 190px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: #000;
+
+            @media(max-width: $breakpoint375) {
+                max-width: 100%;
+            }
+        }
+        &-price {
+            font-weight: 700;
+            font-size: 16px;
+            color: $black;
+            text-align: right;
+        }
+    }
+
+    &__calculation {
+        margin-top: 66px;
+
+        @media(max-width: $breakpoint992) {
+            margin-top: 32px;
+            order: 5;
+        }
+
+        &-btn {
+            border-radius: 14px;
+            padding: 10px;
+            width: 100%;
+            background: $main-color;
+            border: 1px solid $main-color;
+
+            font-weight: 600;
+            font-size: 16px;
+            color: #f8f8f8;
+            transition: all .3s;
+
+            &:hover {
+                color: $main-color;
+                background: transparent;
+            }
+        }
+        &-text {
+            margin-top: 10px;
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            color: $text-color;
+
+            @media(max-width: $breakpoint992) {
+                text-align: center;
+            }
+            @media(max-width: $breakpoint375) {
+                font-size: 12px;
+            }
+        }
+    }
+}

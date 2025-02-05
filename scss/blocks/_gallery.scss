@@ -1,3 +1,18 @@
 .gallery {
     
+    &__wrapper {
+
+        @media(max-width: $breakpoint1024) {
+            margin-top: 26px;
+
+            display: grid;
+            grid-template-columns: 50px auto 50px;
+            align-items: center;
+            gap: 8px;
+        }
+        @media(max-width: 600px) {
+            grid-template-columns: auto;
+        }
+
+    }
 }

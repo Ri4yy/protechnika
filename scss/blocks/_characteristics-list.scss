@@ -22,7 +22,7 @@
     }
 
     &__item {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
@@ -31,6 +31,10 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 0;
+        }
+
+        &:nth-of-type(-n+5) {
+            display: flex;
         }
 
         &-name {

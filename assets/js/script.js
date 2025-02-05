@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     tabs('.tabs', '.tabs__list', '.tabs__content', 'active-tab', 'active');
+    tabs('.calculator-tabs', '.calculator-tabs__list', '.calculator-tabs__content', 'active-tab', 'active');
 
    
     let btnProperties = document.querySelectorAll('.properties-list__item-toggle')
@@ -107,24 +108,20 @@ document.addEventListener('DOMContentLoaded', () => {
         menuCard = document.querySelector('.menu-dropdown__content'),
         sidebarCard = document.querySelector('.menu-dropdown__sidebar');
 
-    propCard.forEach((card) => {
-        new SimpleBar(card, {
-            autoHide: false,
-            scrollbarMaxSize: 42,
-            classNames: {
-                track: 'simplebar-track simplebar-track__card'
-            }
-        });
-    })
-    catalogPropCard.forEach((card) => {
-        new SimpleBar(card, {
-            autoHide: false,
-            scrollbarMaxSize: 42,
-            classNames: {
-                track: 'simplebar-track simplebar-track__catalog-card'
-            }
-        });
-    })
+    function simpleBar(item, options, size, autoHide) {
+        item.forEach((card) => {
+            new SimpleBar(card, {
+                autoHide: autoHide,
+                scrollbarMaxSize: size,
+                classNames: {
+                    track: options
+                }
+            });
+        })
+    }
+    simpleBar(propCard, 'simplebar-track simplebar-track__card', 42, false);
+    simpleBar(catalogPropCard, 'simplebar-track simplebar-track__catalog-card', 42, false);
+
     new SimpleBar(menuCard, {
         scrollbarMaxSize: 80,
         classNames: {
@@ -139,6 +136,65 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // propCard.forEach((card) => {
+    //     new SimpleBar(card, {
+    //         autoHide: false,
+    //         scrollbarMaxSize: 42,
+    //         classNames: {
+    //             track: 'simplebar-track simplebar-track__card'
+    //         }
+    //     });
+    // })
+    // catalogPropCard.forEach((card) => {
+    //     new SimpleBar(card, {
+    //         autoHide: false,
+    //         scrollbarMaxSize: 42,
+    //         classNames: {
+    //             track: 'simplebar-track simplebar-track__catalog-card'
+    //         }
+    //     });
+    // })
+    
+    // Отображать характеристики, если больше 5
+    let showEl = 5;
+    let charBtnStatus = true;
+
+    let characteristicList = document.querySelectorAll('.characteristics-list');
+    const charBtn = document.querySelector('.characteristics__bottom-btn');
+
+    function updateVisibilityChar(status) {
+        characteristicList.forEach((list, index) => {
+            let listItems = list.querySelectorAll('.characteristics-list__item');
+
+            if(status) {
+                listItems.forEach((item, index) => {
+                    item.style.display = 'flex';
+                })
+            } else {
+                listItems.forEach((item, index) => {
+                    if (index >= showEl) {
+                        item.style.display = 'none';
+                    } 
+                })
+            }
+        })
+    }
+
+    if(charBtn) {
+        charBtn.addEventListener('click', () => {
+            if(charBtnStatus) {
+                updateVisibilityChar(true)
+                charBtn.textContent = 'Скрыть';
+                charBtnStatus = false;
+            } else {
+                updateVisibilityChar(false)
+                charBtn.textContent = 'Развернуть';
+                charBtnStatus = true;
+            }
+        })
+    }
+    
+
     // DropDown
     let dropdownToggle = document.querySelector('.header-contacts__dropdown-toggle'),
         dropdownContent = document.querySelector('.header-contacts__dropdown-content');
@@ -148,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdownContent.classList.toggle('active')
     })
 
-    // Modal
+    // Модальное окно
     function showModal(btnOpen, modalBody) {
         btnOpen.click(function () {
             modalBody.addClass('active');
@@ -180,7 +236,54 @@ document.addEventListener('DOMContentLoaded', () => {
     showModal($('.fast-view-btn'), $('.fast-fiew-modal'));
     showModal($('.form-modal-open'), $('.form-modal'));
 
-    // Фильтр в каталоге
+    // Скрипт кастомного range поля в фильтре каталога
+    let range = document.querySelectorAll(".range");
+
+    range.forEach((inputRange) => {
+        let rangeInputFilter = inputRange.querySelectorAll(".range__input input");
+        let rangePrice = inputRange.querySelectorAll(".range__price input");
+        let rangeSelected = inputRange.querySelector(".range__selected");
+        
+        rangeInputFilter.forEach((input) => {
+            let max = parseInt(rangeInputFilter[1].value);
+            let rangeMin = (max / 100) > 1 ? 100 : 1;
+
+            input.addEventListener("input", (e) => {
+                let minRange = parseInt(rangeInputFilter[0].value);
+                let maxRange = parseInt(rangeInputFilter[1].value);
+                if (maxRange - minRange < rangeMin) {
+                if (e.target.className === "min") {
+                    rangeInputFilter[0].value = maxRange - rangeMin;
+                } else {
+                    rangeInputFilter[1].value = minRange + rangeMin;
+                }
+                } else {
+                rangePrice[0].value = minRange;
+                rangePrice[1].value = maxRange;
+                rangeSelected.style.left = (minRange / rangeInputFilter[0].max) * 100 + "%";
+                rangeSelected.style.right = 100 - (maxRange / rangeInputFilter[1].max) * 100 + "%";
+                }
+            });
+        });
+    
+        rangePrice.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minPrice = rangePrice[0].value;
+                let maxPrice = rangePrice[1].value;
+                if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInputFilter[1].max) {
+                if (e.target.className === "min") {
+                    rangeInputFilter[0].value = minPrice;
+                    rangeSelected.style.left = (minPrice / rangeInputFilter[0].max) * 100 + "%";
+                } else {
+                    rangeInputFilter[1].value = maxPrice;
+                    rangeSelected.style.right = 100 - (maxPrice / rangeInputFilter[1].max) * 100 + "%";
+                }
+                }
+            });
+        });
+    })
+
+    // Отображение фильтра на мобильной версии
     let filter = document.querySelector('.catalog__side'),
     filterOpen = document.querySelector('.filter-panel__btn'),
     filterClose = document.querySelector('.filter__close');
@@ -260,7 +363,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const showItem = 4;
     let btnStatus = true;
 
-
     function updateVisibilityBrands() {
         brands.forEach((item, index) => {
             if (index < showItem) {
@@ -270,19 +372,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    if(brands.length > 0) {
+        brandsBtn.addEventListener('click', () => {
+            if(btnStatus) {
+                brands.forEach(item => {
+                    item.style.display = 'block';
+                });
+                brandsBtn.textContent = 'Развернуть';
+                btnStatus = false;
+            } else {
+                updateVisibilityBrands()
+                brandsBtn.textContent = 'Скрыть';
+                btnStatus = true;
+            }
+        })
+    }
 
-    brandsBtn.addEventListener('click', () => {
-        if(btnStatus) {
-            brands.forEach(item => {
-                item.style.display = 'block';
-            });
-            brandsBtn.textContent = 'Развернуть';
-            btnStatus = false;
-        } else {
-            updateVisibilityBrands()
-            brandsBtn.textContent = 'Скрыть';
-            btnStatus = true;
-        }
+    // Кастомное поле range в калькуляторе 
+    const numberInput = document.querySelectorAll('.property-cost');
+    const rangeInput = document.querySelectorAll('.property-cost-range');
+
+    rangeInput.forEach(input => {
+        input.addEventListener('input', (e) => {
+            let parent = e.target.closest('.calculator-input-container')
+            parent.querySelector('.property-cost').value = e.target.value;
+    
+            let target = e.target
+            const min = target.min
+            const max = target.max
+            const val = target.value
+            let percentage = (val - min) * 100 / (max - min)
+    
+            target.style.backgroundSize = percentage + '% 100%'
+        });
+    })
+    numberInput.forEach(input => {
+        input.addEventListener('input', (e) => {
+            let parent = e.target.closest('.calculator-input-container')
+
+            const value = parseInt(e.target.value, 10);
+            if (value >= 0 && value <= 50000000) {
+                parent.querySelector('.property-cost-range').value = value;
+            }
+        });
     })
 
     // Fancybox
@@ -310,40 +442,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    fancybox('fast-view')
-    fancybox('products')
-    fancybox('gallery')
-
-    // Fancybox.bind('[data-fancybox="fast-view"]', {
-    //     compact: false,
-    //     contentClick: "iterateZoom",
-    //     Images: {
-    //         Panzoom: {
-    //             maxScale: 2,
-    //         },
-    //     },
-    //     wheel: "slide",
-    //     Toolbar: {
-    //         display: {
-    //             left: [
-    //                 "infobar",
-    //             ],
-    //             middle: [],
-    //             right: [
-    //                 "iterateZoom",
-    //                 "close",
-    //             ],
-    //         }
-    //     }
-    // });
+    // fancybox('fast-view')
+    // fancybox('products')
+    // fancybox('gallery')
 
     // Видеоплеер
-    $('.click-for-video').click(function () {
-        $(this).css('display', 'none')
-        $('.video__btn').css('display', 'none');
-        $(this).closest('.video__body').addClass('full-screen')
+    const videoClick = document.querySelector('.click-for-video');
+    const videoBtn = document.querySelector('.video__btn');
+    const videoIframeContainer = document.querySelector('.video__iframe');
+    const videoIframe = videoIframeContainer.querySelector('iframe');
 
-        $('.video__iframe').css('display', 'block');
-        $('.video__iframe iframe').prop('src', 'https://rutube.ru/play/embed/7b5dd092b11ab240ae91c036845a774e/');
-    });
+    if(videoClick) {
+        videoClick.addEventListener('click', (e) => {
+            e.target.style.display = 'none';
+            videoBtn.style.display = 'none';
+            e.target.closest('.video__body').classList.add('full-screen');
+    
+            videoIframeContainer.style.display = 'block';
+            videoIframe.setAttribute('src', 'https://rutube.ru/play/embed/7b5dd092b11ab240ae91c036845a774e/');
+        });
+    }
 })

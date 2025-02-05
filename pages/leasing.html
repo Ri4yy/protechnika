@@ -363,6 +363,115 @@
         </section>
 
         <!-- Калькулятор -->
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator">
+                    <h2 class="second-title second-title--lg calculator__title">ОНЛАЙН КАЛЬКУЛЯТОР</h2>
+                    <div class="calculator__wrapper">
+                        <div class="calculator-info">
+                            <div class="calculator-info__wrapper">
+                                <div class="calculator-info__left">
+                                    <div class="calculator-info__group">
+                                        <div class="calculator-info__row">
+                                            <div class="calculator-input-container">
+                                                <label for="value-property">Стоимость имущества</label>
+                                                <div class="calculator-input-container__input">
+                                                    <input type="number" class="property-cost" id="value-property" name="value-property" min="0" max="50000000" value="0" step="1000" pattern="\d+" onKeyPress="if(this.value.length === 8) return false"> 
+                                                    <span class="calculator-input-container__symbol">₽</span>
+                                                </div>
+                                                <div class="calculator-input-container__range">
+                                                    <input type="range" class="property-cost-range" min="0" max="50000000" value="0" step="1000">
+                                                    <span class="calculator-input-container__label">до 50 000 000 ₽</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calculator-info__row">
+                                            <div class="calculator-input-container">
+                                                <label for="payment-amount">Размер аванса</label>
+                                                <div class="calculator-input-container__input">
+                                                    <input type="number" class="property-cost" id="payment-amount" name="payment-amount" min="0" max="50" value="0" step="1" pattern="\d+" onKeyPress="if(this.value.length === 2) return false">
+                                                    <span class="calculator-input-container__symbol">%</span>
+                                                </div>
+                                                <div class="calculator-input-container__range">
+                                                    <input type="range" class="property-cost-range" min="0" max="50" value="0" step="1">
+                                                    <span class="calculator-input-container__label">до 50 %</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calculator-info__row">
+                                            <div class="calculator-input-container">
+                                                <label for="term-contract">Срок договора</label>
+                                                <div class="calculator-input-container__input">
+                                                    <input type="number" class="property-cost" id="term-contract" min="0" max="60" value="0" step="1" pattern="\d+" onKeyPress="if(this.value.length === 2) return false">
+                                                    <span class="calculator-input-container__symbol">мес.</span>
+                                                </div>
+                                                <div class="calculator-input-container__range">
+                                                    <input type="range" class="property-cost-range" min="0" max="60" value="0" step="1">
+                                                    <span class="calculator-input-container__label">до 60 мес.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculator-info__bottom">
+                                        <ul class="calculator-info__bottom-list">
+                                            <li class="calculator-info__bottom-item">
+                                                <span class="calculator-info__bottom-text">Возврат НДС</span>
+                                                <p class="calculator-info__bottom-price" id="return-nds">1 932 834 руб.</p>
+                                            </li>
+                                            <li class="calculator-info__bottom-item">
+                                                <span class="calculator-info__bottom-text">Экономия налога на прибыль</span>
+                                                <p class="calculator-info__bottom-price" id="tax-savings">1 932 834 руб.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="calculator-info__right">
+                                    <div class="calculator-info__graph">
+                                        <p class="calculator-info__graph-title">Вид графика платежей</p>
+                                        <div class="calculator-info__graph-wrapper">
+                                            <div class="custom-radio">
+                                                <input id="uniform-schedule" type="radio" name="radio" value="uniform-schedule" checked>
+                                                <label for="uniform-schedule">Равномерный</label>
+                                            </div>
+                                            <div class="custom-radio">
+                                                <input id="descending-schedule" type="radio" name="radio" value="descending-schedule">
+                                                <label for="descending-schedule">Убывающий</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculator-info__result">
+                                        <ul class="calculator-info__result-list">
+                                            <li class="calculator-info__result-item">
+                                                <span class="calculator-info__result-text">Первоначальный 
+                                                    взнос: </span>
+                                                <p class="calculator-info__result-price" id="initial-payment">4 870 500 руб.</p>
+                                            </li>
+                                            <li class="calculator-info__result-item">
+                                                <span class="calculator-info__result-text">Удорожание: </span>
+                                                <p class="calculator-info__result-price" id="down-payment">9.15%</p>
+                                            </li>
+                                            <li class="calculator-info__result-item">
+                                                <span class="calculator-info__result-text">Ежемесячный платёж
+                                                    с учётом НДС: </span>
+                                                <p class="calculator-info__result-price" id="monthly-payment">269 060 руб.</p>
+                                            </li>
+                                            <li class="calculator-info__result-item">
+                                                <span class="calculator-info__result-text">Сумма по договору: </span>
+                                                <p class="calculator-info__result-price" id="contract-amount">11 597 003 руб.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="calculator-info__calculation">
+                                        <button class="calculator-info__calculation-btn">Оставить заявку</button>
+                                        <span class="calculator-info__calculation-text">*Расчет является предварителным. Для более точного расчета обратитесь к нашему специалисту  </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Банки -->
         <section class="leasing-banks-section">
@@ -623,7 +732,7 @@
                         </ul>
                     </div>
                     <div class="footer__right">
-                        <div class="tabs">
+                        <div class="tabs tabs--footer">
                             <ul class="tabs__list">
                                 <li class="active-tab">Офис</li>
                                 <li>База</li>

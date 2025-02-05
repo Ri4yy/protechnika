@@ -1,0 +1,18 @@
+.calculator {
+
+    &__title {
+        @media(max-width: $breakpoint992) {
+            font-size: 36px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 32px;
+        }
+    }
+    &__wrapper {
+        margin-top: 48px;
+
+        @media(max-width: $breakpoint992) {
+            margin-top: 32px;
+        }
+    }
+}
