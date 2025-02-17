@@ -1,0 +1,52 @@
+.toggle-radio {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 27px;
+    border-radius: 14px;
+    border: 1px solid $main-color;
+    background: #fff;
+    cursor: pointer;
+  
+    input {
+      display: none;
+    }
+  
+    &__label {
+      position: absolute;
+      bottom: 2px;
+      width: 21px;
+      height: 21px;
+      background: #323232;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  
+    label[data-radio="off"] {
+        box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.25);
+        left: 3px;
+        z-index: 1;
+    }
+  
+    label[data-radio="on"] {
+        left: 3px;
+        z-index: 2;
+    }
+  
+    input[data-radio="on"]:checked ~ label[data-radio="off"] {
+        left: calc(100% - 24px);
+        background: #ff7a00;
+        z-index: 3;
+    }
+    input[data-radio="on"]:checked ~ label[data-radio="on"] {
+        left: calc(100% - 24px);
+        background: #ff7a00;
+        z-index: 2;
+    }
+  
+    input[data-radio="on"]:checked ~ label[data-radio="on"] {
+        z-index: 2;
+    }
+  }
+  

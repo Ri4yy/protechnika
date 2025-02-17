@@ -6305,6 +6305,54 @@ h1 {
   transition: 0.4s;
 }
 
+.toggle-radio {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 27px;
+  border-radius: 14px;
+  border: 1px solid #FF6F00;
+  background: #fff;
+  cursor: pointer;
+}
+.toggle-radio input {
+  display: none;
+}
+.toggle-radio__label {
+  position: absolute;
+  bottom: 2px;
+  width: 21px;
+  height: 21px;
+  background: #323232;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.toggle-radio label[data-radio=off] {
+  -webkit-box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.25);
+  left: 3px;
+  z-index: 1;
+}
+.toggle-radio label[data-radio=on] {
+  left: 3px;
+  z-index: 2;
+}
+.toggle-radio input[data-radio=on]:checked ~ label[data-radio=off] {
+  left: calc(100% - 24px);
+  background: #ff7a00;
+  z-index: 3;
+}
+.toggle-radio input[data-radio=on]:checked ~ label[data-radio=on] {
+  left: calc(100% - 24px);
+  background: #ff7a00;
+  z-index: 2;
+}
+.toggle-radio input[data-radio=on]:checked ~ label[data-radio=on] {
+  z-index: 2;
+}
+
 .section-card {
   display: -webkit-box;
   display: -ms-flexbox;
