@@ -186,8 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnNextGallery = document.querySelector('.gallery-btn-next');
     const btnPrevGallery = document.querySelector('.gallery-btn-prev');
     
-    btnNextGallery.addEventListener('click', () => swiperGallery.slideNext());
-    btnPrevGallery.addEventListener('click', () => swiperGallery.slidePrev());
+    if(btnNextGallery && btnPrevGallery) {
+        btnNextGallery.addEventListener('click', () => swiperGallery.slideNext());
+        btnPrevGallery.addEventListener('click', () => swiperGallery.slidePrev());
+    }
 
     const swiperReview = new Swiper('.swiper-review', {
         spaceBetween: 40,
@@ -231,6 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnNextOutside = document.querySelector('.review-btn-next');
     const btnPrevOutside = document.querySelector('.review-btn-prev');
     
-    btnNextOutside.addEventListener('click', () => swiperReview.slideNext());
-    btnPrevOutside.addEventListener('click', () => swiperReview.slidePrev());
+    if(btnNextOutside && btnPrevOutside) {
+        btnNextOutside.addEventListener('click', () => swiperReview.slideNext());
+        btnPrevOutside.addEventListener('click', () => swiperReview.slidePrev());
+    }
 })

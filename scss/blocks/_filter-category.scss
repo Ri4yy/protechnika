@@ -5,6 +5,13 @@
 
     &__list {
 
+        &:has(.filter-properties__list.radio) .filter-category__top {
+            display: none;
+        }
+        &:has(.filter-properties__list.radio) .filter-category__description {
+            margin-top: 0 !important;
+        }
+
         &.open {
 
             & .filter-category__top {
@@ -86,6 +93,11 @@
         }
 
         &:not(:has(input:checked)) {
+            & span {
+                color: $text-color;
+            }
+        }
+        &:not(:has(input[data-radio="on"]:checked)) {
             & span {
                 color: $text-color;
             }

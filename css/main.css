@@ -3309,6 +3309,93 @@ h1 {
   }
 }
 
+.leasing-form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.leasing-form__input {
+  padding: 10px 24px;
+  background-color: #fff;
+}
+.leasing-form__bottom {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.leasing-form__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.leasing-form__btn:hover .consult-form__btn-icon {
+  background: transparent;
+  border: 1px solid #FF6F00;
+}
+.leasing-form__btn:hover .consult-form__btn-icon svg {
+  fill: #FF6F00;
+  -webkit-transform: translate(3px, -3px);
+          transform: translate(3px, -3px);
+}
+.leasing-form__btn-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #FF6F00;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.leasing-form__btn-icon svg {
+  fill: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.leasing-form__btn-text {
+  font-weight: 800;
+  font-size: 16px;
+  color: #323232;
+}
+.leasing-form__confirm {
+  max-width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 130%;
+  color: #9a9a98;
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .leasing-form__confirm {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   .leasing {
     padding: 28px 0;
@@ -5891,6 +5978,12 @@ h1 {
           flex-direction: column;
   gap: 16px;
 }
+.filter-category__list:has(.filter-properties__list.radio) .filter-category__top {
+  display: none;
+}
+.filter-category__list:has(.filter-properties__list.radio) .filter-category__description {
+  margin-top: 0 !important;
+}
 .filter-category__list.open .filter-category__top .filter-category__icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -5969,6 +6062,9 @@ h1 {
   color: #323232;
 }
 .filter-category__row:not(:has(input:checked)) span {
+  color: #9a9a98;
+}
+.filter-category__row:not(:has(input[data-radio=on]:checked)) span {
   color: #9a9a98;
 }
 .filter-category__more {
@@ -6446,6 +6542,41 @@ h1 {
   }
 }
 
+.form-leasing__body {
+  height: 370px;
+  max-width: 384px;
+  width: 100%;
+}
+@media (max-width: 404px) {
+  .form-leasing__body {
+    max-width: 98vw;
+  }
+}
+.form-leasing__wrapper {
+  padding: 36px;
+  height: 100%;
+}
+@media (max-width: 375px) {
+  .form-leasing__wrapper {
+    padding: 36px 12px;
+  }
+}
+.form-leasing__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 12px;
+}
+@media (max-width: 480px) {
+  .form-leasing__close {
+    top: 24px;
+    right: 24px;
+  }
+}
+
 .modal-form-block {
   height: 100%;
   display: -webkit-box;
@@ -6473,6 +6604,36 @@ h1 {
   }
 }
 .modal-form-block__wrapper {
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-leasing-form-block {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-leasing-form-block__title {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #323232;
+}
+@media (max-width: 480px) {
+  .modal-leasing-form-block__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+.modal-leasing-form-block__wrapper {
   max-width: 400px;
   width: 100%;
 }

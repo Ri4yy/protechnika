@@ -235,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showModal($('.fast-view-btn'), $('.fast-fiew-modal'));
     showModal($('.form-modal-open'), $('.form-modal'));
+    showModal($('.form-leasing-open'), $('.form-leasing'));
 
     // Скрипт кастомного range поля в фильтре каталога
     let range = document.querySelectorAll(".range");
@@ -462,4 +463,101 @@ document.addEventListener('DOMContentLoaded', () => {
             videoIframe.setAttribute('src', 'https://rutube.ru/play/embed/7b5dd092b11ab240ae91c036845a774e/');
         });
     }
+
+    // Калькулятор
+    const inputs = {
+        propertyCost: document.getElementById('value-property'),
+        paymentAmount: document.getElementById('payment-amount'),
+        termContract: document.getElementById('term-contract')
+    };
+
+    const ranges = {
+        propertyCost: document.querySelector('.property-cost-range'),
+        paymentAmount: document.querySelectorAll('.property-cost-range')[1],
+        termContract: document.querySelectorAll('.property-cost-range')[2]
+    };
+
+    const outputs = {
+        returnNds: document.getElementById('return-nds'),
+        taxSavings: document.getElementById('tax-savings'),
+        initialPayment: document.getElementById('initial-payment'),
+        downPayment: document.getElementById('down-payment'),
+        monthlyPayment: document.getElementById('monthly-payment'),
+        contractAmount: document.getElementById('contract-amount')
+    };
+
+    const scheduleRadios = {
+        uniform: document.getElementById('uniform-schedule'),
+        descending: document.getElementById('descending-schedule')
+    };
+
+    const formatCurrency = (value) => new Intl.NumberFormat('ru-RU').format(Math.round(value)) + ' руб.';
+    const formatPercent = (value) => value.toFixed(2) + '%';
+
+    function syncValue(type, value) {
+        inputs[type].value = value;
+        ranges[type].value = value;
+        calculate();
+    }
+
+    function sanitizeNumberInput(input) {
+        input.value = input.value.replace(/[^\d]/g, '');
+    }
+
+    function formatNumberInput(input) {
+        let value = input.value.replace(/\s+/g, '');
+        if (!isNaN(value) && value !== '') {
+            input.value = parseInt(value).toLocaleString('ru-RU');
+        }
+    }
+
+    function calculate() {
+        const propertyCost = parseFloat(inputs.propertyCost.value.replace(/\s+/g, '')) || 0;
+        const paymentAmount = parseFloat(inputs.paymentAmount.value) || 0;
+        const termContract = parseInt(inputs.termContract.value) || 1;
+
+        const isUniform = scheduleRadios.uniform.checked;
+
+        const initialPayment = propertyCost * (paymentAmount / 100);
+        const leasingAmount = propertyCost - initialPayment;
+
+        const returnNds = propertyCost * 0.2;
+        const taxSavings = leasingAmount * 0.2 * 0.2;
+
+        const interestRate = isUniform ? 0.0915 : 0.085;
+        const totalOverpayment = leasingAmount * interestRate;
+
+        const contractAmount = propertyCost + totalOverpayment;
+        const monthlyPayment = (leasingAmount + totalOverpayment) / termContract;
+
+        // Заполняем результаты
+        outputs.initialPayment.textContent = formatCurrency(initialPayment);
+        outputs.returnNds.textContent = formatCurrency(returnNds);
+        outputs.taxSavings.textContent = formatCurrency(taxSavings);
+        outputs.downPayment.textContent = formatPercent(interestRate * 100);
+        outputs.monthlyPayment.textContent = formatCurrency(monthlyPayment);
+        outputs.contractAmount.textContent = formatCurrency(contractAmount);
+    }
+
+console.log(inputs)
+    // События для инпутов и слайдеров
+    Object.keys(inputs).forEach(type => {
+        inputs[type].addEventListener('input', () => {
+            sanitizeNumberInput(inputs[type]);
+            if (type === 'propertyCost') formatNumberInput(inputs[type]);
+            syncValue(type, inputs[type].value.replace(/\s+/g, ''));
+        });
+
+        ranges[type].addEventListener('input', () => {
+            syncValue(type, ranges[type].value);
+        });
+    });
+
+    // Обработка смены графика
+    Object.values(scheduleRadios).forEach(radio => {
+        radio.addEventListener('change', calculate);
+    });
+
+    // Инициализация при загрузке
+    calculate();
 })

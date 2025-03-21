@@ -307,7 +307,7 @@
                     <div class="leasing__bottom">
                         <p class="leasing__bottom-text">Вы выбираете техику и подаете заявку, мы рассмотрим и одобрим ее в течении 2 часов. Документы в бонк мы подадим сами.<br>
                         Вы приедите на подписание и оплату </p>
-                        <button class="leasing__btn leasing__btn--desktop">Отправить заявку</button>
+                        <button class="leasing__btn leasing__btn--desktop form-leasing-open">Отправить заявку</button>
                     </div>
                 </div>
             </div>
@@ -316,7 +316,7 @@
                     <img src="../assets/img/photo/leasing.png" alt="">
                 </div>
             </div>
-            <button class="leasing__btn leasing__btn--mobile">Отправить заявку</button>
+            <button class="leasing__btn leasing__btn--mobile form-leasing-open">Отправить заявку</button>
         </section>
 
         <section class="leasing-adv-section">
@@ -765,6 +765,42 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal form-leasing">
+        <div class="modal__body form-leasing__body">
+            <div class="modal__wrapper form-leasing__wrapper">
+                <button class="close-modal form-leasing__close">
+                    <img src="../assets/img/icons/close.svg" alt="">
+                </button>
+                <div class="modal__info">
+                    <div class="modal-leasing-form-block">
+                        <div class="modal-leasing-form-block__wrapper">
+                            <p class="modal-leasing-form-block__title">Заполните форму и наш специалист свяжется с вами</p>
+                            <form action="" class="form leasing-form">
+                                <div class="leasing-form__wrapper">
+                                    <input type="text" class="input leasing-form__input" name="name" placeholder="Ваше имя">
+                                    <input type="tel" class="input leasing-form__input" name="phone" placeholder="Номер телефона">
+                                </div>
+                                <div class="leasing-form__bottom">
+                                    <button class="leasing-form__btn">
+                                        <div class="leasing-form__btn-icon">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5163 10.8174C14.5189 11.3536 14.0863 11.7862 13.5501 11.7836C13.0139 11.781 12.5771 11.3443 12.5746 10.8081L12.5398 3.54093L1.89131 14.1894C1.51398 14.5668 0.89926 14.5638 0.5183 14.1829C0.137341 13.8019 0.134401 13.1872 0.511731 12.8098L11.1602 2.16136L3.89305 2.12658C3.35686 2.12402 2.92011 1.68727 2.91754 1.15108C2.91498 0.614884 3.34757 0.182294 3.88376 0.18486L13.4948 0.230847C14.031 0.233412 14.4677 0.67016 14.4703 1.20635L14.5163 10.8174Z" />
+                                            </svg>
+                                        </div>
+                                        <span class="leasing-form__btn-text">Отправить</span>
+                                    </button>
+                                    <span class="leasing-form__confirm">
+                                        Нажимая на кнопку “Отправить”, вы соглашаетесь на обработку персональных данных
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../assets/libs/jquery.min.js"></script>
     <script src="../assets/libs/swiper-bundle.min.js"></script>

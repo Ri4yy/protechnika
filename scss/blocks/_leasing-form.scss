@@ -1,0 +1,74 @@
+.leasing-form {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__input {
+        padding: 10px 24px;
+        background-color: #fff;
+    }
+    &__bottom {
+        margin-top: 24px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__btn {    
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:hover {
+            & .consult-form__btn-icon {
+                background: transparent;
+                border: 1px solid $main-color;
+
+                & svg {
+                    fill: $main-color;
+                    transform: translate(3px, -3px);
+                }
+            }
+        }
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: $main-color;
+    
+            transition: all .3s;
+    
+            & svg {
+                fill: #fff;
+    
+                transition: all .3s;
+            }
+        }
+        &-text {
+            font-weight: 800;
+            font-size: 16px;
+            color: $black;
+        }
+    }
+
+    &__confirm {
+        max-width: 220px;
+
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        color: $text-color;
+        text-align: center;
+
+        @media(max-width: $breakpoint375) {
+            max-width: 100%;
+        }
+    }
+}
